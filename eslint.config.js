@@ -1,72 +1,74 @@
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
-import importPlugin from "eslint-plugin-import";
-import jsxA11y from "eslint-plugin-jsx-a11y";
-import tailwind from "eslint-plugin-tailwindcss";
-import { defineConfig, globalIgnores } from "eslint/config";
+import js from '@eslint/js'
+import { defineConfig, globalIgnores } from 'eslint/config'
+import globals from 'globals'
+import importPlugin from 'eslint-plugin-import'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
+import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tseslint from 'typescript-eslint'
 
 export default defineConfig([
-  globalIgnores(["dist"]),
-
+  globalIgnores(['dist', 'node_modules', 'coverage']),
+  js.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
+  react.configs.flat.recommended,
+  react.configs.flat['jsx-runtime'],
+  jsxA11y.flatConfigs.recommended,
+  importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
+  ...tailwindcss.configs['flat/recommended'],
+  reactHooks.configs.flat.recommended,
+  reactRefresh.configs.vite,
   {
-    files: ["**/*.{ts,tsx}"],
-
-    extends: [
-      js.configs.recommended,
-      ...tseslint.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-    ],
-
-    plugins: {
-      import: importPlugin,
-      "jsx-a11y": jsxA11y,
-      tailwindcss: tailwind,
-    },
-
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: globals.browser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
-
+    settings: {
+      react: {
+        version: 'detect',
+      },
+      'import/resolver': {
+        node: true,
+        typescript: true,
+      },
+      tailwindcss: {
+        callees: ['cn', 'clsx', 'cva'],
+      },
+    },
     rules: {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-
-      "import/order": [
-        "error",
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'tailwindcss/classnames-order': 'warn',
+      'tailwindcss/no-custom-classname': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
         {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-          ],
-          "newlines-between": "always",
-          alphabetize: { order: "asc", caseInsensitive: true },
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
         },
       ],
-
-      "jsx-a11y/anchor-is-valid": "warn",
-
-      "tailwindcss/classnames-order": "warn",
-      "tailwindcss/no-custom-classname": "off",
-
-      "no-console": "warn",
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "warn",
-        { argsIgnorePattern: "^_" },
+      'import/order': [
+        'warn',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            ['parent', 'sibling', 'index'],
+          ],
+          'newlines-between': 'always',
+          alphabetize: { order: 'asc', caseInsensitive: true },
+        },
       ],
-
-      "@typescript-eslint/consistent-type-imports": "error",
-      "@typescript-eslint/no-explicit-any": "warn",
     },
   },
-]);
+])
