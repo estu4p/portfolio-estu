@@ -58,7 +58,7 @@ const AboutMe = () => {
       </div>
       {/* How I work */}
       <div className="relative mt-28 flex gap-6 px-8">
-        <div className="box-title -top-20">
+        <div className="box-title">
           <h2 className="text-title">How I Work</h2>
         </div>
         <div className="bg-primary relative w-[40%] overflow-hidden rounded-3xl px-8 py-6 brightness-90">

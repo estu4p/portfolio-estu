@@ -1,12 +1,12 @@
-import imgFooter from '../assets/images/img-footer.jpg'
+import footerImage from '../assets/images/img-footer.jpg'
 import { FOOTER_LINKS } from '../constants'
 
 const Footer = () => {
   return (
-    <section className="relative h-[780px] overflow-hidden p-2">
+    <section className="relative h-195 overflow-hidden p-2">
       <div
         className="h-full w-full rounded-4xl bg-cover bg-no-repeat px-7.5 py-10"
-        style={{ backgroundImage: `url(${imgFooter})` }}
+        style={{ backgroundImage: `url(${footerImage})` }}
       >
         <div className="flex justify-between md:w-[30%]">
           {FOOTER_LINKS.map((link) => (
