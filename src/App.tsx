@@ -5,6 +5,7 @@ import Banner from './sections/Banner'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import Hero from './sections/Hero'
+import Projects from './sections/Projects'
 import TechnicalSkills from './sections/TechnicalSkills'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <Banner />
       <AboutMe />
+      <Projects />
       <TechnicalSkills />
       <Contact />
       <Footer />

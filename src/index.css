@@ -9,6 +9,7 @@
   --color-primary: #131313;
   --color-secondary: #5c5c5c;
   --color-accent: #353535;
+  --color-white80: #ffffffa3;
 
   --color-orange: #ff4d00;
 }
@@ -33,5 +34,5 @@ body {
 }
 
 .text-title {
-  @apply font-cal-sans to-secondary/35 -z-10 bg-gradient-to-t from-transparent bg-clip-text text-8xl text-transparent;
+  @apply font-cal-sans to-secondary/35 -z-10 bg-gradient-to-t from-transparent bg-clip-text text-8xl text-nowrap text-transparent;
 }

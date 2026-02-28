@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex justify-between md:w-[30%]">
           {FOOTER_LINKS.map((link) => (
             <div key={link.label} className="">
-              <h3 className="mb-4 text-[#FFFFFFA3]">{link.label}</h3>
+              <h3 className="text-white80 mb-4">{link.label}</h3>
               <ul className="mt-2 space-y-2.5">
                 {link.links.map((subLink) => (
                   <li key={subLink.label} className="">
@@ -28,10 +28,10 @@ const Footer = () => {
           ))}
         </div>
         <div className="mt-32 flex w-1/2 items-center justify-between">
-          <span className="text-[#FFFFFFA3]">
+          <span className="text-white80">
             © 2025 Agero. All rights reserved.
           </span>
-          <span className="text-[#FFFFFFA3]">Yogyakarta, Indonesia</span>
+          <span className="text-white80">Yogyakarta, Indonesia</span>
         </div>
         <h1 className="font-cal-sans text-background/80 absolute bottom-0 left-1/2 -translate-x-1/2 text-[clamp(6rem,25vw,25rem)] lg:-bottom-32">
           Estu.dev

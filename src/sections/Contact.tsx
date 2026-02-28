@@ -63,6 +63,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        {/* marquee */}
         <div className="absolute right-7.5 bottom-10 left-7.5 flex items-center gap-8 text-nowrap">
           {Array.from({ length: 4 }).map((_, index) => (
             <div key={index} className="flex items-center gap-7.5">
