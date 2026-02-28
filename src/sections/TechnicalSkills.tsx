@@ -2,7 +2,7 @@ const TechnicalSkills = () => {
   return (
     <section className="mt-20 h-screen">
       {/* title */}
-      <div className="absolute left-1/2 -translate-x-1/2">
+      <div className="box-title">
         <h2 className="text-title">Technical Skills</h2>
       </div>
     </section>
