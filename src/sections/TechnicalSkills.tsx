@@ -3,7 +3,7 @@ import banner from '../assets/images/banner.jpg'
 
 const TechnicalSkills = () => {
   return (
-    <section className="relative mt-20 min-h-screen">
+    <section className="relative mt-20">
       {/* title */}
       <div className="ml-16 px-10">
         <span className="text-secondary mb-4 block">(Tech Stack)</span>

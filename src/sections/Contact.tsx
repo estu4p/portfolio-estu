@@ -3,7 +3,7 @@ import icon1 from '../assets/icons/icons1.svg'
 
 const Contact = () => {
   return (
-    <section className="relative mt-48 h-195 px-2">
+    <section className="relative mt-50 h-195 px-2">
       <div className="box-title -mt-28">
         <span className="text-secondary mb-2 block text-center">(Contact)</span>
         <h2 className="text-title">Let's Connect</h2>
