@@ -30,6 +30,7 @@ const Hero = () => {
           <Button
             title="View Projects"
             icon={<ArrowRight className="h-5 w-5" />}
+            className="button-shadow"
           />
         </div>
       </div>
