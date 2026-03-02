@@ -36,3 +36,7 @@ body {
 .text-title {
   @apply font-cal-sans to-secondary/35 -z-10 bg-gradient-to-t from-transparent bg-clip-text text-8xl leading-none text-nowrap text-transparent;
 }
+
+.box-badge {
+  @apply bg-[rgba(12,12,12,0.82)] shadow-[inset_0px_0.5px_0.5px_0px_rgba(255,255,255,0.24),_inset_0px_4px_16px_0px_rgba(255,255,255,0.16),_0px_1px_2px_0px_rgba(26,26,26,0.08),_0px_2px_6px_0px_rgba(26,26,26,0.04)];
+}
