@@ -9,7 +9,7 @@ const HeroIcon = ({
 }) => {
   return (
     <div
-      className={`${bgColor} inline-flex h-16 w-20 items-center justify-center overflow-hidden rounded-full px-4 text-white`}
+      className={`${bgColor} hidden h-16 w-20 items-center justify-center overflow-hidden rounded-full px-4 text-white md:inline-flex`}
     >
       {icon}
     </div>

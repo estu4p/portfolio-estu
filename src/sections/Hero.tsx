@@ -8,22 +8,23 @@ const Hero = () => {
       <div className="mx-auto text-center">
         <p className="text-secondary mb-4 text-xl">Hi there, I'm Estu</p>
 
-        <h1 className="font-cal-sans text-7xl leading-[1.2] text-black">
+        <h1 className="font-cal-sans mx-auto text-[34px] leading-[1.2] text-black md:text-7xl">
           Building Robust <HeroIcon icon={<ShieldCheck size={36} />} />
           <br />
-          <span className="text-secondary">and</span>{' '}
+          <span className="text-secondary"> and</span>{' '}
           <span className="text-orange">
             Scalable{' '}
             <HeroIcon icon={<TrendingUp size={36} />} bgColor="bg-black" />
           </span>{' '}
           Full-Stack
           <br />
-          <span className="text-secondary">Web Solutions</span>
+          <span className="text-secondary"> Web Solutions</span>
         </h1>
-        <p className="mt-8 text-base">
+        <p className="mt-8 px-10 text-base">
           I design and develop modern web applications focused on solid
-          architecture, performance, security, <br /> and long-term scalability
-          — delivering clean, efficient, and future-ready solutions.
+          architecture, performance, security,{' '}
+          <br className="hidden md:block" /> and long-term scalability —
+          delivering clean, efficient, and future-ready solutions.
         </p>
         <div className="mt-12">
           <Button

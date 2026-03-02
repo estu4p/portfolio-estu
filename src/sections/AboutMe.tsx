@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, X } from 'lucide-react'
+import { Instagram, Linkedin } from 'lucide-react'
 import Badge from '../components/ui/Badge'
 import MarqueeAboutMe from '../components/ui/MarqueeAboutMe'
 import { ABOUT_ME_DATA } from '../constants'

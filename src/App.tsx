@@ -12,7 +12,6 @@ import TechnicalSkills from './sections/TechnicalSkills'
 function App() {
   return (
     <>
-      <Header />
       <Navbar />
       <Hero />
       <Banner />
