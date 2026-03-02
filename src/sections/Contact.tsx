@@ -3,8 +3,9 @@ import icon1 from '../assets/icons/icons1.svg'
 
 const Contact = () => {
   return (
-    <section className="relative mt-20 h-195 px-2">
-      <div className="box-title -top-20">
+    <section className="relative mt-48 h-195 px-2">
+      <div className="box-title -mt-28">
+        <span className="text-secondary mb-2 block text-center">(Contact)</span>
         <h2 className="text-title">Let's Connect</h2>
       </div>
       <div
@@ -14,7 +15,7 @@ const Contact = () => {
         <div className="flex">
           {/* left */}
           <div className="w-2/5">
-            <h2 className="font-cal-sans text-[64px] leading-none text-white">
+            <h2 className="font-cal-sans text-[64px] leading-[1.1] text-white">
               Got a project in mind?
             </h2>
             <p className="mt-4 text-white">

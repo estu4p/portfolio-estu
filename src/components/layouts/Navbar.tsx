@@ -3,10 +3,10 @@ import Button from '../ui/Button'
 
 const Navbar = () => {
   return (
-    <div className="bg-background flex items-center justify-between px-10 pt-9">
+    <div className="bg-background flex items-center justify-between px-10 pt-8">
       {/* logo */}
       <div className="text-orange font-cal-sans text-4xl leading-0.5">
-        <h1>estu.</h1>
+        <h1>Estu.</h1>
       </div>
       {/* navigation */}
       <div className="flex items-center gap-10">

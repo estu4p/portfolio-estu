@@ -1,47 +1,14 @@
-import icon1 from '../assets/icons/icons1.svg'
 import icon1orange from '../assets/icons/icons1-orange.svg'
 import photo from '../assets/images/banner.jpg'
+import MarqueeAboutMe from '../components/ui/MarqueeAboutMe'
 
 const AboutMe = () => {
   return (
     <section className="mt-16">
       {/* marquee */}
       <div className="relative flex flex-col justify-center gap-12 overflow-hidden py-20">
-        <div
-          className="scale-110 -rotate-6 bg-black p-3 text-nowrap"
-          //   data-duration="20"
-        >
-          <div className="flex gap-3.5">
-            <div className="flex items-center gap-7">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className="flex items-center">
-                  <span className="font-cal-sans text-[32px] text-white">
-                    10 Year Experience
-                  </span>
-                  <img src={icon1} alt="Logo" className="ml-4 inline h-7 w-7" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="bg-orange absolute left-0 scale-110 rotate-z-6 p-3 text-nowrap"
-          //   data-duration="20"
-        >
-          <div className="flex gap-3.5">
-            <div className="flex items-center gap-7">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className="flex items-center">
-                  <span className="font-cal-sans text-[32px] text-white">
-                    10 Year Experience
-                  </span>
-                  <img src={icon1} alt="Logo" className="ml-4 inline h-7 w-7" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <MarqueeAboutMe className="-rotate-6 bg-black" />
+        <MarqueeAboutMe className="bg-orange absolute left-0 rotate-z-6" />
       </div>
       {/* (About Me) */}
       <div className="mt-28 text-center">
@@ -58,7 +25,7 @@ const AboutMe = () => {
       </div>
       {/* How I work */}
       <div className="relative mt-28 flex gap-6 px-8">
-        <div className="box-title">
+        <div className="box-title -mt-20">
           <h2 className="text-title">How I Work</h2>
         </div>
         <div className="bg-primary relative w-[40%] overflow-hidden rounded-3xl px-8 py-6 brightness-90">
@@ -76,7 +43,7 @@ const AboutMe = () => {
             <img src={icon1orange} alt="Icon" className="h-64 w-64" />
           </div>
         </div>
-        <div className="h-[360px] w-[60%]">
+        <div className="h-90 w-[60%]">
           <img
             src={photo}
             alt="Profile"
