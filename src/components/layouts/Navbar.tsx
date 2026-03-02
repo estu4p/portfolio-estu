@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       <div className="top-0 z-50 max-md:sticky">
         <Header />
-        <nav className="bg-background px-10 pt-8 pb-3 md:pb-0">
+        <nav className="bg-background px-5 pt-8 pb-3 md:px-10 md:pb-0">
           <div className="flex items-center justify-between">
             {/* logo */}
             <div className="text-orange font-cal-sans text-4xl leading-0.5">
@@ -34,7 +34,7 @@ const Navbar = () => {
               <Button title="Contact" />
             </div>
             <button className="md:hidden" onClick={handleNavMobileOpen}>
-              <Equal className="cursor-pointer text-2xl" />
+              <Equal className="h-7 w-7 cursor-pointer" />
             </button>
           </div>
         </nav>

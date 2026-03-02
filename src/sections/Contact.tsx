@@ -3,8 +3,8 @@ import icon1 from '../assets/icons/icons1.svg'
 
 const Contact = () => {
   return (
-    <section className="relative mt-50 h-195 px-2">
-      <div className="box-title -mt-28">
+    <section className="relative mt-50 px-2 md:h-195">
+      <div className="box-title">
         <span className="text-secondary mb-2 block text-center">(Contact)</span>
         <h2 className="text-title">Let's Connect</h2>
       </div>
@@ -12,9 +12,9 @@ const Contact = () => {
         className="relative h-full w-full overflow-x-hidden rounded-4xl bg-cover bg-center bg-no-repeat px-7.5 py-10"
         style={{ backgroundImage: `url(${contactImage})` }}
       >
-        <div className="flex">
+        <div className="flex flex-col max-md:mb-40 md:flex-row">
           {/* left */}
-          <div className="w-2/5">
+          <div className="md:w-2/5">
             <h2 className="font-cal-sans text-[64px] leading-[1.1] text-white">
               Got a project in mind?
             </h2>
@@ -23,8 +23,8 @@ const Contact = () => {
             </p>
           </div>
           {/* right */}
-          <div className="flex w-1/2 justify-end">
-            <form className="w-114 space-y-8">
+          <div className="flex w-[80%] justify-end max-md:mt-10 md:w-1/2">
+            <form className="w-full space-y-8 md:w-114">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-base text-white">
                   Your Name

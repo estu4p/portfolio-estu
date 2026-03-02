@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section className="relative mt-48 p-2">
       {/* title */}
-      <div className="box-title -mt-28">
+      <div className="box-title">
         <span className="text-secondary mb-2 block text-center">
           (Projects)
         </span>

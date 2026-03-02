@@ -20,20 +20,20 @@ const ProjectCard = ({
   previewLink,
 }: ProjectsProps) => {
   return (
-    <div className="relative flex h-screen w-full items-center justify-center overflow-hidden rounded-4xl py-3.25">
+    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden rounded-4xl p-10 md:p-3.25">
       {/* blur */}
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${image})`,
-          backgroundPosition: 'right bottom -290px',
+          // backgroundPosition: 'right bottom -290px',
         }}
       />
       {/* background blur */}
       <div className="absolute inset-0 bg-black/20 backdrop-blur-xl" />
       {/* content */}
-      <div className="relative z-10 flex gap-12">
-        <div className="flex min-h-full w-full flex-col justify-between md:w-56">
+      <div className="relative z-10 flex flex-col gap-12 md:flex-row">
+        <div className="flex min-h-full w-full flex-col justify-between gap-17.5 md:w-56">
           <p className="text-white80">{desc}</p>
           <div className="">
             <div className="">
@@ -57,12 +57,12 @@ const ProjectCard = ({
               <p className="text-white80">Year</p>
               <span className="font-cal-sans text-2xl text-white">{year}</span>
             </div>
-            <div className="mt-16 space-y-1.5">
+            <div className="mt-7 space-y-1.5 md:mt-16">
               <p className="text-white80">Tools</p>
               <span className="text-white">{tools}</span>
             </div>
           </div>
-          <div className="mt-16 space-y-1.5">
+          <div className="mt-7 space-y-1.5 md:mt-16">
             <p className="text-white80">Features</p>
             <ul className="space-y-1.5">
               {features.map((feature, index) => (
@@ -72,7 +72,7 @@ const ProjectCard = ({
               ))}
             </ul>
           </div>
-          <div className="absolute -right-20 bottom-0">
+          <div className="absolute right-0 bottom-0 md:-right-20">
             <a
               href={previewLink}
               className="text-white80 flex items-center gap-2 underline"

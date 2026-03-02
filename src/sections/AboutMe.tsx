@@ -7,26 +7,27 @@ const AboutMe = () => {
   return (
     <section className="mt-16">
       {/* marquee */}
-      <div className="relative flex flex-col justify-center gap-12 overflow-hidden py-20">
-        <MarqueeAboutMe className="-rotate-6 bg-black" />
-        <MarqueeAboutMe className="bg-orange absolute left-0 rotate-z-6" />
+      <div className="relative flex flex-col items-center justify-center gap-12 overflow-hidden py-20">
+        <MarqueeAboutMe className="-rotate-[7deg] bg-black md:-rotate-6" />
+        <MarqueeAboutMe className="bg-orange absolute left-1/2 -translate-x-1/2 rotate-z-[7deg] md:rotate-z-6" />
       </div>
       {/* (About Me) */}
-      <div className="mt-28 text-center">
+      <div className="mt-28 px-10 text-center">
         <span className="font-cal-sans text-orange text-2xl">(About Me)</span>
         <div className="mt-4 w-full text-center">
-          <h2 className="font-cal-sans inline-block text-5xl leading-[1.1] text-black">
-            I am a Fullstack Web Developer <br /> experienced in building
-            modern,
+          <h2 className="font-cal-sans inline-block text-[35px] leading-[1.1] text-black md:text-5xl">
+            I am a Fullstack Web Developer <br className="max-md:hidden" />{' '}
+            experienced in building modern,
             <span className="text-secondary">
-              scalable <br /> web applications from concept to deployment.
+              scalable <br className="max-md:hidden" /> web applications from
+              concept to deployment.
             </span>
           </h2>
         </div>
       </div>
       {/* How I work */}
-      <div className="mt-14 flex justify-center gap-54 px-8">
-        <div className="relative w-107">
+      <div className="mt-14 flex flex-col justify-center gap-24 px-5 md:flex-row md:justify-between md:px-8">
+        <div className="relative w-full md:w-107">
           <img
             src={ABOUT_ME_DATA.photo}
             alt="Profile"
@@ -41,7 +42,7 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-114 flex-col justify-between">
+        <div className="flex w-full flex-col justify-between md:w-114">
           <div className="">
             <span className="text-primary font-cal-sans text-4xl">
               {ABOUT_ME_DATA.title}

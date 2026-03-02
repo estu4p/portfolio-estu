@@ -8,7 +8,7 @@ const Footer = () => {
         className="h-full w-full rounded-4xl bg-cover bg-no-repeat px-7.5 py-10"
         style={{ backgroundImage: `url(${footerImage})` }}
       >
-        <div className="flex justify-between md:w-[30%]">
+        <div className="flex flex-col justify-between gap-7 md:w-[30%] md:flex-row">
           {FOOTER_LINKS.map((link) => (
             <div key={link.label} className="">
               <h3 className="text-white80 mb-4">{link.label}</h3>
@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="mt-32 flex w-1/2 items-center justify-between">
+        <div className="mt-20 flex w-1/2 flex-col flex-wrap justify-between gap-7 md:mt-32 md:flex-row md:items-center">
           <span className="text-white80">
             © 2025 Agero. All rights reserved.
           </span>

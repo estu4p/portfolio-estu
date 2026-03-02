@@ -17,19 +17,19 @@ const ExperienceCard = ({
   desc,
 }: ExperienceCardProps) => {
   return (
-    <div className="flex justify-between">
-      <div className="w-[30%] md:mt-40">
+    <div className="relative flex flex-col justify-between md:flex-row">
+      <div className="md:mt-40 md:w-[30%]">
         <div className="flex items-center gap-4">
           <Badge text={badge} />
           <span className="text-accent text-base">01 </span>
           <span className="text-accent/60 text-base">/ 03</span>
         </div>
-        <hr className="border-secondary/40 my-6" />
+        <hr className="border-secondary/40 my-7" />
         <span className="text-secondary block">{name}</span>
         <span className="font-cal-sans text-primary block text-base">
           {year}
         </span>
-        <div className="mt-12 flex items-center gap-4">
+        <div className="-top-12 right-0 mt-12 flex items-center gap-4 max-md:absolute">
           <div className="box-badge flex h-fit w-fit items-center justify-center rounded-full p-3">
             <ChevronLeft className="h-5 w-5 text-white/80" />
           </div>
@@ -38,15 +38,15 @@ const ExperienceCard = ({
           </div>
         </div>
       </div>
-      <div className="mx-auto w-fit">
+      <div className="mx-auto mt-7 w-fit md:mt-0">
         <img
           src={photo}
           alt={name}
           className="h-121.75 w-107 rounded-3xl object-cover brightness-90"
         />
       </div>
-      <div className="my-auto flex w-[30%] flex-col items-end">
-        <p className="text-accent w-[80%] leading-normal">{desc}</p>
+      <div className="my-auto flex w-full flex-col items-end max-md:mt-7 md:w-[30%]">
+        <p className="text-accent leading-normal md:w-[80%]">{desc}</p>
       </div>
     </div>
   )

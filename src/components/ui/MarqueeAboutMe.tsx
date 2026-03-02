@@ -10,7 +10,7 @@ const MarqueeAboutMe = ({ className }: { className?: string }) => {
               <span className="font-cal-sans text-[32px] text-white">
                 10 Year Experience
               </span>
-              <img src={icon1} alt="Logo" className="ml-4 inline h-7 w-7" />
+              <img src={icon1} alt="Logo" className="mx-7 inline h-7 w-7" />
             </div>
           ))}
         </div>
