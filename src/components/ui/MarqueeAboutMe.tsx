@@ -7,7 +7,7 @@ const MarqueeAboutMe = ({ className }: { className?: string }) => {
         <div className="flex items-center gap-7">
           {Array.from({ length: 4 }).map((_, index) => (
             <div key={index} className="flex items-center">
-              <span className="font-cal-sans text-[32px] text-white">
+              <span className="font-cal-sans text-[32px] whitespace-nowrap text-white">
                 10 Year Experience
               </span>
               <img src={icon1} alt="Logo" className="mx-7 inline h-7 w-7" />

@@ -18,7 +18,7 @@ const Hero = () => {
           </span>{' '}
           Full-Stack
           <br />
-          <span className="text-secondary"> Web Solutions</span>
+          <span className="text-secondary block"> Web Solutions</span>
         </h1>
         <p className="mt-8 px-10 text-base">
           I design and develop modern web applications focused on solid

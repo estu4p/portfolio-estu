@@ -10,7 +10,7 @@ import TechnicalSkills from './sections/TechnicalSkills'
 
 function App() {
   return (
-    <>
+    <div className="max-container w-full overflow-x-hidden">
       <Navbar />
       <Hero />
       <Banner />
@@ -20,7 +20,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 

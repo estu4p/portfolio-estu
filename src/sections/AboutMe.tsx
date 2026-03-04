@@ -18,7 +18,7 @@ const AboutMe = () => {
           <h2 className="font-cal-sans inline-block text-[35px] leading-[1.1] text-black md:text-5xl">
             I am a Fullstack Web Developer <br className="max-md:hidden" />{' '}
             experienced in building modern,
-            <span className="text-secondary">
+            <span className="text-secondary block">
               scalable <br className="max-md:hidden" /> web applications from
               concept to deployment.
             </span>
@@ -26,23 +26,25 @@ const AboutMe = () => {
         </div>
       </div>
       {/* How I work */}
-      <div className="mt-14 flex flex-col justify-center gap-24 px-5 md:flex-row md:justify-between md:px-8">
-        <div className="relative w-full md:w-107">
-          <img
-            src={ABOUT_ME_DATA.photo}
-            alt="Profile"
-            className="h-121.75 w-full rounded-3xl object-cover brightness-90"
-          />
-          <div className="absolute bottom-8 left-8 flex items-center gap-2.5">
-            <div className="hover:bg-orange rounded-full bg-white/16 p-3 transition-colors duration-300">
-              <Instagram size={20} className="h-5 w-5 text-white/80" />
-            </div>
-            <div className="hover:bg-orange rounded-full bg-white/16 p-3">
-              <Linkedin size={20} className="h-5 w-5 text-white/80" />
+      <div className="mt-14 flex flex-col flex-wrap justify-center gap-10 px-5 md:flex-row md:justify-between md:px-8">
+        <div className="flex w-full flex-col items-end justify-end lg:w-1/2">
+          <div className="relative h-121.75 w-full overflow-hidden rounded-3xl lg:w-107">
+            <img
+              src={ABOUT_ME_DATA.photo}
+              alt="Profile"
+              className="h-full w-full object-cover brightness-90"
+            />
+            <div className="absolute bottom-8 left-8 flex items-center gap-2.5">
+              <div className="hover:bg-orange rounded-full bg-white/16 p-3 transition-colors duration-300">
+                <Instagram size={20} className="h-5 w-5 text-white/80" />
+              </div>
+              <div className="hover:bg-orange rounded-full bg-white/16 p-3">
+                <Linkedin size={20} className="h-5 w-5 text-white/80" />
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col justify-between md:w-114">
+        <div className="flex w-full flex-col justify-between lg:w-114">
           <div className="">
             <span className="text-primary font-cal-sans text-4xl">
               {ABOUT_ME_DATA.title}

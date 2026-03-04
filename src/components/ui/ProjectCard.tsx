@@ -20,7 +20,7 @@ const ProjectCard = ({
   previewLink,
 }: ProjectsProps) => {
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden rounded-4xl p-10 md:p-3.25">
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-4xl p-10 md:p-3.25 lg:h-195">
       {/* blur */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

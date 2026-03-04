@@ -3,7 +3,7 @@ import banner from '../assets/images/banner.jpg'
 
 const TechnicalSkills = () => {
   return (
-    <section className="relative mt-28 md:mt-20">
+    <section className="relative mt-28 h-full overflow-x-hidden md:mt-20">
       {/* title */}
       <div className="px-5 md:ml-16">
         <span className="text-secondary mb-4 block">(Tech Stack)</span>
@@ -11,7 +11,21 @@ const TechnicalSkills = () => {
           Technical Skills
         </h2>
       </div>
-      <div className="mt-16 px-5">
+      <div className="relative mt-16 px-5">
+        <div className="absolute top-1/2 -z-10 flex -translate-y-1/2 items-center gap-16 text-nowrap">
+          <h3 className="font-cal-sans text-orange text-9xl leading-none">
+            Front-End
+          </h3>
+          <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
+          <h3 className="font-cal-sans text-orange text-9xl leading-none">
+            Front-End
+          </h3>
+          <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
+          <h3 className="font-cal-sans text-orange text-9xl leading-none">
+            Front-End
+          </h3>
+          <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
+        </div>
         <div className="border-t-secondary/20 text-secondary flex items-center justify-between border-t pt-8 font-medium md:mx-10">
           <button className="text-orange flex cursor-pointer items-center gap-3 font-medium">
             {' '}
@@ -21,21 +35,7 @@ const TechnicalSkills = () => {
           <button className="cursor-pointer">Database</button>
           <button className="cursor-pointer">Tools</button>
         </div>
-        <div className="relative mt-16 flex h-full flex-col items-center justify-center overflow-x-hidden">
-          <div className="absolute top-1/2 -z-10 flex -translate-y-1/2 items-center gap-16 text-nowrap">
-            <h3 className="font-cal-sans text-orange text-9xl leading-none">
-              Front-End
-            </h3>
-            <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
-            <h3 className="font-cal-sans text-orange text-9xl leading-none">
-              Front-End
-            </h3>
-            <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
-            <h3 className="font-cal-sans text-orange text-9xl leading-none">
-              Front-End
-            </h3>
-            <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
-          </div>
+        <div className="mt-16 flex h-full flex-col items-center justify-center">
           <div className="h-91.5 max-w-137.5">
             <img
               src={banner}
