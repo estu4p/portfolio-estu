@@ -14,6 +14,7 @@
     "@fontsource/cal-sans": "^5.2.3",
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.2.1",
+    "gsap": "^3.14.2",
     "lucide-react": "^0.575.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

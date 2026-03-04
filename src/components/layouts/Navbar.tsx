@@ -1,11 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NAV_LINKS } from '../../constants'
 import Button from '../ui/Button'
 import { Equal } from 'lucide-react'
 import Header from '../ui/Header'
+import { useRevealAnimation } from '../../hooks/useRefealAnimation'
 
 const Navbar = () => {
   const [navMobileOpen, setNavMobileOpen] = useState(false)
+  const navRef = useRef<HTMLDivElement>(null)
+
+  useRevealAnimation(navRef, {
+    delay: 0.6,
+    duration: 0.4,
+    spring: true,
+  })
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -25,9 +33,9 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar top-0 z-50 max-md:sticky">
+    <div className="navbar bg-background top-0 z-50 max-md:sticky">
       <Header />
-      <nav className="bg-background relative px-5 pt-8 pb-3 md:px-10 md:pb-0">
+      <nav ref={navRef} className="relative px-5 pt-8 pb-3 md:px-10 md:pb-0">
         <div className="relative z-30 flex items-center justify-between">
           {/* logo */}
           <div className="text-orange font-cal-sans text-4xl leading-0.5">
