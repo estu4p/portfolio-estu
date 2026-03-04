@@ -6,7 +6,7 @@ const Banner = () => {
       <img
         src={banner}
         alt="Banner"
-        className="h-auto w-full rounded-4xl object-cover"
+        className="aspect-video h-auto w-full rounded-4xl object-cover"
       />
     </section>
   )

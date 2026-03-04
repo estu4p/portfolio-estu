@@ -9,7 +9,7 @@ const Contact = () => {
         <h2 className="text-title">Let's Connect</h2>
       </div>
       <div
-        className="relative h-full w-full overflow-x-hidden rounded-4xl bg-cover bg-center bg-no-repeat px-7.5 py-10"
+        className="relative h-full w-full overflow-x-hidden rounded-4xl bg-cover bg-center bg-no-repeat px-5 py-10 md:px-7.5"
         style={{ backgroundImage: `url(${contactImage})` }}
       >
         <div className="flex flex-col max-md:mb-40 md:flex-row">

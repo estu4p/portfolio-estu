@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <section className="relative h-195 overflow-hidden p-2">
       <div
-        className="h-full w-full rounded-4xl bg-cover bg-no-repeat px-7.5 py-10"
+        className="h-full w-full rounded-4xl bg-cover bg-no-repeat px-5 py-10 md:px-7.5"
         style={{ backgroundImage: `url(${footerImage})` }}
       >
         <div className="flex flex-col justify-between gap-7 md:w-[30%] md:flex-row">
@@ -36,8 +36,8 @@ const Footer = () => {
         <h1 className="font-cal-sans text-background/80 absolute bottom-0 left-1/2 -translate-x-1/2 text-[clamp(6rem,25vw,25rem)] leading-none lg:-bottom-11">
           Estu.dev
         </h1>
-        <div className="absolute bottom-2 left-1/2 h-16 w-[85%] -translate-x-1/2 rounded-full bg-transparent backdrop-blur-xs"></div>
       </div>
+      <div className="absolute bottom-2.5 left-1/2 h-8 w-[90%] -translate-x-1/2 rounded-lg bg-transparent backdrop-blur-xs md:h-16 md:w-[85%] md:rounded-full"></div>
     </section>
   )
 }

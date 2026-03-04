@@ -15,7 +15,7 @@
 }
 
 body {
-  @apply text-secondary bg-background-secondary font-inter text-sm;
+  @apply text-secondary bg-background-secondary font-inter overflow-x-hidden text-sm;
 }
 
 /* 

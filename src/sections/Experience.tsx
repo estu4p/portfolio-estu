@@ -3,7 +3,7 @@ import ExperienceCard from '../components/ui/ExperienceCard'
 
 const Experience = () => {
   return (
-    <section className="relative mt-50 px-10">
+    <section className="relative mt-50 px-5 md:px-10">
       {/* title */}
       <div className="box-title">
         <span className="text-secondary mb-2 block text-center">

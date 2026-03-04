@@ -10,16 +10,18 @@ import TechnicalSkills from './sections/TechnicalSkills'
 
 function App() {
   return (
-    <div className="max-container w-full overflow-x-hidden">
+    <div className="max-container w-full">
       <Navbar />
-      <Hero />
-      <Banner />
-      <AboutMe />
-      <Projects />
-      <TechnicalSkills />
-      <Experience />
-      <Contact />
-      <Footer />
+      <div className="overflow-x-hidden">
+        <Hero />
+        <Banner />
+        <AboutMe />
+        <Projects />
+        <TechnicalSkills />
+        <Experience />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   )
 }
