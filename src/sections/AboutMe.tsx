@@ -1,13 +1,39 @@
 import MarqueeAboutMe from '../components/ui/MarqueeAboutMe'
 import AboutMeCard from '../components/ui/AboutMeCard'
+import { useRef } from 'react'
+import { useMarqueeReveal } from '../hooks/useMarqueeReveal'
 
 const AboutMe = () => {
+  const marqueeRef1 = useRef<HTMLDivElement>(null)
+  const marqueeRef2 = useRef<HTMLDivElement>(null)
+
+  useMarqueeReveal(marqueeRef1)
+  useMarqueeReveal(marqueeRef2)
+
   return (
     <section className="mt-16">
       {/* marquee */}
       <div className="relative flex flex-col items-center justify-center gap-12 overflow-hidden py-20">
-        <MarqueeAboutMe className="-rotate-[7deg] bg-black md:-rotate-6" />
-        <MarqueeAboutMe className="bg-orange absolute left-1/2 -translate-x-1/2 rotate-z-[7deg] md:rotate-z-6" />
+        <MarqueeAboutMe
+          className="-rotate-[7deg] bg-black py-4 md:-rotate-6"
+          speed={25}
+          items={[
+            '10 Year Experience',
+            'Full-Stack Developer',
+            'System Architecture',
+            'Scalable Web Solutions',
+          ]}
+        />
+        <MarqueeAboutMe
+          className="bg-orange absolute left-1/2 -translate-x-1/2 rotate-z-[7deg] py-4 md:rotate-z-6"
+          speed={25}
+          items={[
+            '10 Year Experience',
+            'Full-Stack Developer',
+            'System Architecture',
+            'Scalable Web Solutions',
+          ]}
+        />
       </div>
       {/* (About Me) */}
       <div className="mt-28 px-10 text-center">
