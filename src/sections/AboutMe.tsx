@@ -2,6 +2,7 @@ import MarqueeAboutMe from '../components/ui/MarqueeAboutMe'
 import AboutMeCard from '../components/ui/AboutMeCard'
 import { useRef } from 'react'
 import { useMarqueeReveal } from '../hooks/useMarqueeReveal'
+import RevealTextAboutMe from '../components/ui/RevealTextAboutMe'
 
 const AboutMe = () => {
   const marqueeRef1 = useRef<HTMLDivElement>(null)
@@ -38,8 +39,8 @@ const AboutMe = () => {
       {/* (About Me) */}
       <div className="mt-28 px-10 text-center">
         <span className="font-cal-sans text-orange text-2xl">(About Me)</span>
-        <div className="mt-4 w-full text-center">
-          <h2 className="font-cal-sans inline-block text-[34px] leading-[1.1] text-black md:text-5xl">
+        <div className="mt-4 flex w-full items-center justify-center">
+          {/* <h2 className="font-cal-sans inline-block text-[34px] leading-[1.1] text-black md:text-5xl">
             I am a Fullstack Web Developer <br className="max-md:hidden" />{' '}
             experienced in building modern,
             <span className="text-secondary">
@@ -47,7 +48,10 @@ const AboutMe = () => {
               scalable <br className="max-lg:hidden" /> web applications from
               concept to deployment.
             </span>
-          </h2>
+          </h2> */}
+          <div className="w-full md:w-[70%]">
+            <RevealTextAboutMe text="I am a Fullstack Web Developer experienced in building modern, scalable web applications from concept to deployment." />
+          </div>
         </div>
       </div>
       {/* How I work */}
