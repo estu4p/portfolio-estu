@@ -1,7 +1,17 @@
 import contactImage from '../assets/images/contact.jpg'
 import icon1 from '../assets/icons/icons1.svg'
+import { useRef } from 'react'
+import { useMarqueeReveal } from '../hooks/useMarqueeReveal'
+import useTextBlur from '../hooks/useTextBlur'
 
 const Contact = () => {
+  // const sectionRef = useRef<HTMLElement>(null)
+  const textBlur = useRef<HTMLHeadingElement>(null)
+  const marqueeRef = useRef<HTMLDivElement>(null)
+
+  useTextBlur(textBlur)
+  useMarqueeReveal(marqueeRef)
+
   return (
     <section className="relative mt-50 px-2 md:h-195">
       <div className="box-title">
@@ -15,7 +25,10 @@ const Contact = () => {
         <div className="flex flex-col max-md:mb-40 md:flex-row">
           {/* left */}
           <div className="md:w-2/5">
-            <h2 className="font-cal-sans text-[64px] leading-[1.1] text-white">
+            <h2
+              ref={textBlur}
+              className="font-cal-sans text-[64px] leading-[1.1] text-white"
+            >
               Got a project in mind?
             </h2>
             <p className="mt-4 text-white">
@@ -65,7 +78,10 @@ const Contact = () => {
           </div>
         </div>
         {/* marquee */}
-        <div className="absolute right-7.5 bottom-10 left-7.5 flex items-center gap-8 text-nowrap">
+        <div
+          ref={marqueeRef}
+          className="absolute right-7.5 bottom-10 left-7.5 flex items-center gap-8 text-nowrap"
+        >
           {Array.from({ length: 4 }).map((_, index) => (
             <div key={index} className="flex items-center gap-7.5">
               <h3 className="font-cal-sans hover:text-orange text-[32px] text-white">

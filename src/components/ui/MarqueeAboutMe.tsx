@@ -17,7 +17,6 @@ const MarqueeAboutMe = forwardRef<HTMLDivElement, MarqueeProps>(
 
       const track = trackRef.current
 
-      // Clone content
       track.innerHTML += track.innerHTML
 
       const totalWidth = track.scrollWidth / 2

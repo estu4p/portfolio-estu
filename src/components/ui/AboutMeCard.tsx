@@ -3,9 +3,11 @@ import { ABOUT_ME_DATA } from '../../constants'
 import Badge from './Badge'
 import { useRef } from 'react'
 import useScrollZoom from '../../hooks/useScrollZoom'
+import { useRevealAnimation } from '../../hooks/useRevealAnimation'
 
 const AboutMeCard = () => {
   const photoRef = useRef<HTMLDivElement>(null)
+  const descRef = useRef<HTMLDivElement>(null)
 
   useScrollZoom(photoRef, {
     scale: 1.25,
@@ -14,9 +16,19 @@ const AboutMeCard = () => {
     ease: 'power2.out',
   })
 
+  useRevealAnimation(descRef, {
+    y: 50,
+    duration: 1,
+    delay: 0.2,
+    ease: 'power2.inOut',
+    scrollTrigger: {
+      start: 'top 80%',
+    },
+  })
+
   return (
-    <div className="flex flex-col flex-wrap justify-center gap-10 px-5 md:flex-row md:justify-between md:px-8">
-      <div className="flex w-full flex-col items-end justify-end lg:w-1/2">
+    <div className="flex flex-col flex-wrap justify-center gap-10 px-5 md:flex-row md:justify-baseline md:px-8">
+      <div className="flex w-full flex-col items-center justify-center lg:w-1/2">
         <div className="relative h-121.75 w-full overflow-hidden rounded-3xl lg:w-107">
           <div ref={photoRef} className="h-full w-full overflow-hidden">
             <img
@@ -35,7 +47,10 @@ const AboutMeCard = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col justify-between lg:w-114">
+      <div
+        ref={descRef}
+        className="flex w-full flex-col justify-between lg:w-114"
+      >
         <div className="">
           <span className="text-primary font-cal-sans text-3xl md:text-4xl">
             {ABOUT_ME_DATA.title}

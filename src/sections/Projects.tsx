@@ -1,7 +1,10 @@
 import ProjectCard from '../components/ui/ProjectCard'
 import { PROJECTS_DATA } from '../constants'
+import { useSectionStack } from '../hooks/useSectionStack'
 
 const Projects = () => {
+  useSectionStack()
+
   return (
     <section className="relative mt-48 p-2">
       {/* title */}
@@ -13,7 +16,13 @@ const Projects = () => {
       </div>
       <div className="flex flex-col gap-2">
         {PROJECTS_DATA.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <div
+            id={project.id}
+            key={index}
+            className="project-section will-change-transform"
+          >
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
     </section>

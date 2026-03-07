@@ -41,8 +41,7 @@ const useScrollZoom = <T extends HTMLElement>(
           ease,
           scrollTrigger: {
             trigger: ref.current,
-            start: 'top 85%',
-            // end: ' 40%',
+            start: 'top center',
             scrub: true,
           },
         },

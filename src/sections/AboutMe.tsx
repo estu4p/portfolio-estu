@@ -1,17 +1,12 @@
 import MarqueeAboutMe from '../components/ui/MarqueeAboutMe'
 import AboutMeCard from '../components/ui/AboutMeCard'
 import { useRef } from 'react'
-import { useMarqueeReveal } from '../hooks/useMarqueeReveal'
 import RevealTextAboutMe from '../components/ui/RevealTextAboutMe'
 import { useRevealAnimation } from '../hooks/useRevealAnimation'
 
 const AboutMe = () => {
-  const marqueeRef1 = useRef<HTMLDivElement>(null)
-  const marqueeRef2 = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
 
-  useMarqueeReveal(marqueeRef1)
-  useMarqueeReveal(marqueeRef2)
   useRevealAnimation(titleRef, {
     x: -60,
     duration: 0.4,

@@ -39,12 +39,10 @@ const AnimatedHeroText = ({ children }: { children: React.ReactNode }) => {
         chars,
         {
           opacity: 0,
-          y: 20,
           filter: 'blur(10px)',
         },
         {
           opacity: 1,
-          y: 0,
           filter: 'blur(0px)',
           duration: 0.4,
           ease: 'cubic-bezier(0.44, 0, 0.56, 1)',

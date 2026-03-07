@@ -1,9 +1,9 @@
 import { ArrowRight, ShieldCheck, TrendingUp } from 'lucide-react'
 import Button from '../components/ui/Button'
 import HeroIcon from '../components/ui/HeroIcon'
-import AnimatedHeroText from '../animation/AnimatedHeroText'
 import { useRef } from 'react'
 import { useRevealAnimation } from '../hooks/useRevealAnimation'
+import AnimatedHeroText from '../components/ui/AnimatedHeroText'
 
 const Hero = () => {
   const hiRef = useRef<HTMLParagraphElement>(null)

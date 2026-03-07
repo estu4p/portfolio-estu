@@ -11,26 +11,12 @@ export const useMarqueeReveal = <T extends HTMLElement>(
     if (!ref.current) return
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        ref.current,
-        {
-          opacity: 0,
-          x: 0,
-          y: 0,
-        },
-        {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          duration: 1.2,
-          //   ease: 'elastic.out(1, 0.6)',
-          scrollTrigger: {
-            trigger: ref.current,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        },
-      )
+      gsap.to(ref.current, {
+        xPercent: -50,
+        duration: 20,
+        ease: 'linear',
+        repeat: -1,
+      })
     }, ref)
 
     return () => ctx.revert()

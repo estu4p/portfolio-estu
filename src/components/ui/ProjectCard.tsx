@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 
 interface ProjectsProps {
+  id: string
   project: string
   desc: string
   image: string
@@ -11,6 +12,7 @@ interface ProjectsProps {
 }
 
 const ProjectCard = ({
+  id,
   project,
   desc,
   image,
@@ -20,7 +22,10 @@ const ProjectCard = ({
   previewLink,
 }: ProjectsProps) => {
   return (
-    <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-4xl p-5 md:p-3.25 lg:h-195">
+    <div
+      id={id}
+      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden rounded-4xl p-5 md:p-3.25 lg:h-195"
+    >
       {/* blur */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -41,7 +46,7 @@ const ProjectCard = ({
               <span className="text-white80">/ 03</span>
               <hr className="mt-4 w-11 border-white/40" />
             </div>
-            <span className="font-cal-sans -mb-5 block text-[64px] text-white">
+            <span className="font-cal-sans -mb-5 block text-[64px] leading-none text-white">
               {project}
             </span>
           </div>

@@ -1,5 +1,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Badge from './Badge'
+import { useRef } from 'react'
+import { useRevealAnimation } from '../../hooks/useRevealAnimation'
 
 interface ExperienceCardProps {
   badge: string
@@ -16,6 +18,18 @@ const ExperienceCard = ({
   photo,
   desc,
 }: ExperienceCardProps) => {
+  const descRef = useRef<HTMLParagraphElement>(null)
+
+  useRevealAnimation(descRef, {
+    y: 12,
+    duration: 0.6,
+    delay: 0.4,
+    ease: 'power2.inOut',
+    scrollTrigger: {
+      start: 'top 80%',
+    },
+  })
+
   return (
     <div className="relative flex flex-col justify-between md:flex-row">
       <div className="md:mt-40 md:w-[30%]">
@@ -46,7 +60,9 @@ const ExperienceCard = ({
         />
       </div>
       <div className="my-auto flex w-full flex-col items-end max-md:mt-7 md:w-[30%]">
-        <p className="text-accent leading-normal md:w-[80%]">{desc}</p>
+        <p ref={descRef} className="text-accent leading-normal md:w-[80%]">
+          {desc}
+        </p>
       </div>
     </div>
   )

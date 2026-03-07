@@ -1,28 +1,55 @@
+import { useRef } from 'react'
 import icon1Orange from '../assets/icons/icons1-orange.svg'
 import banner from '../assets/images/banner.jpg'
+import { useMarqueeReveal } from '../hooks/useMarqueeReveal'
+import useTextBlur from '../hooks/useTextBlur'
+import { useRevealAnimation } from '../hooks/useRevealAnimation'
 
 const TechnicalSkills = () => {
+  const marqueeRef = useRef<HTMLDivElement>(null)
+  const textBlur = useRef<HTMLHeadingElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
+
+  useTextBlur(textBlur)
+  useMarqueeReveal(marqueeRef)
+
+  useRevealAnimation(imageRef, {
+    x: 110,
+    duration: 0.6,
+    delay: 0.4,
+    ease: 'power2.inOut',
+    scrollTrigger: {
+      start: 'top center',
+    },
+  })
+
   return (
     <section className="relative mt-28 h-full overflow-x-hidden md:mt-20">
       {/* title */}
       <div className="px-5 md:ml-16">
         <span className="text-secondary mb-4 block">(Tech Stack)</span>
-        <h2 className="font-cal-sans text-primary text-[64px] leading-none">
+        <h2
+          ref={textBlur}
+          className="font-cal-sans text-primary text-[64px] leading-none"
+        >
           Technical Skills
         </h2>
       </div>
-      <div className="relative mt-16 px-5">
-        <div className="absolute top-1/2 -z-10 flex -translate-y-1/2 items-center gap-16 text-nowrap">
+      <div className="relative mt-16 overflow-x-hidden px-5">
+        <div
+          ref={marqueeRef}
+          className="absolute top-1/2 -z-10 flex w-full -translate-y-1/2 items-center gap-16 text-nowrap"
+        >
           <h3 className="font-cal-sans text-orange text-9xl leading-none">
             Front-End
           </h3>
           <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
           <h3 className="font-cal-sans text-orange text-9xl leading-none">
-            Front-End
+            Back-End
           </h3>
           <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
           <h3 className="font-cal-sans text-orange text-9xl leading-none">
-            Front-End
+            End-End
           </h3>
           <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
         </div>
@@ -36,7 +63,7 @@ const TechnicalSkills = () => {
           <button className="cursor-pointer">Tools</button>
         </div>
         <div className="mt-16 flex h-full flex-col items-center justify-center">
-          <div className="h-91.5 max-w-137.5">
+          <div ref={imageRef} className="h-91.5 max-w-137.5">
             <img
               src={banner}
               alt="Banner"
