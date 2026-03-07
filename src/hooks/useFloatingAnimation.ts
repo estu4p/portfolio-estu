@@ -20,16 +20,18 @@ export const useFloatingAnimation = <T extends HTMLElement>(
   } = options || {}
 
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
+    if (!ref.current) return
 
-    gsap.to(el, {
-      xPercent,
-      yPercent,
-      duration,
-      ease,
-      repeat: -1,
-      yoyo: true,
-    })
+    const ctx = gsap.context(() => {
+      gsap.to(ref.current, {
+        xPercent,
+        yPercent,
+        duration,
+        ease,
+        repeat: -1,
+        yoyo: true,
+      })
+    }, ref)
+    return () => ctx.revert()
   }, [ref, xPercent, yPercent, duration, ease])
 }

@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 interface ScrollZoomOptions {
   scale?: number
+  opacity?: number
   duration?: number
   ease?: string
 }
@@ -16,35 +17,39 @@ const useScrollZoom = <T extends HTMLElement>(
 ) => {
   const {
     scale = 1.25,
+    opacity = 1,
     // delay = 0,
     duration = 0.8,
-    ease = 'power2.out',
+    ease = 'elastic.out(1, 0.4)',
     // spring = false,
   } = options
 
   useEffect(() => {
     if (!ref.current) return
 
-    gsap.fromTo(
-      ref.current,
-      {
-        scale,
-      },
-      {
-        scale: 1,
-        duration,
-        ease,
-        scrollTrigger: {
-          trigger: ref.current,
-          start: 'top 85%',
-          toggleActions: 'play none none none',
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ref.current,
+        {
+          scale,
+          opacity,
         },
-      },
-    )
-  }, [ref, scale, duration, ease])
-
-  //   return (
-  //   )
+        {
+          scale: 1,
+          opacity: 1,
+          duration,
+          ease,
+          scrollTrigger: {
+            trigger: ref.current,
+            start: 'top 85%',
+            // end: ' 40%',
+            scrub: true,
+          },
+        },
+      )
+    }, ref)
+    return () => ctx.revert()
+  }, [ref, scale, opacity, duration, ease])
 }
 
 export default useScrollZoom

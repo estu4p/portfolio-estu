@@ -15,9 +15,11 @@ const AboutMe = () => {
   useRevealAnimation(titleRef, {
     x: -60,
     duration: 0.4,
-    delay: 1.4,
+    delay: 0,
     ease: 'power2.inOut',
-    scrollTrigger: true,
+    scrollTrigger: {
+      start: 'top 85%',
+    },
   })
 
   return (

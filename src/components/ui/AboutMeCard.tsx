@@ -8,7 +8,8 @@ const AboutMeCard = () => {
   const photoRef = useRef<HTMLDivElement>(null)
 
   useScrollZoom(photoRef, {
-    scale: 3,
+    scale: 1.25,
+    opacity: 0.8,
     duration: 0.8,
     ease: 'power2.out',
   })
