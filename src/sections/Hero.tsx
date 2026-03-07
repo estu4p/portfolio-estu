@@ -3,7 +3,7 @@ import Button from '../components/ui/Button'
 import HeroIcon from '../components/ui/HeroIcon'
 import AnimatedHeroText from '../animation/AnimatedHeroText'
 import { useRef } from 'react'
-import { useRevealAnimation } from '../hooks/useRefealAnimation'
+import { useRevealAnimation } from '../hooks/useRevealAnimation'
 
 const Hero = () => {
   const hiRef = useRef<HTMLParagraphElement>(null)

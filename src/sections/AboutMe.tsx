@@ -3,13 +3,22 @@ import AboutMeCard from '../components/ui/AboutMeCard'
 import { useRef } from 'react'
 import { useMarqueeReveal } from '../hooks/useMarqueeReveal'
 import RevealTextAboutMe from '../components/ui/RevealTextAboutMe'
+import { useRevealAnimation } from '../hooks/useRevealAnimation'
 
 const AboutMe = () => {
   const marqueeRef1 = useRef<HTMLDivElement>(null)
   const marqueeRef2 = useRef<HTMLDivElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null)
 
   useMarqueeReveal(marqueeRef1)
   useMarqueeReveal(marqueeRef2)
+  useRevealAnimation(titleRef, {
+    x: -60,
+    duration: 0.4,
+    delay: 1.4,
+    ease: 'power2.inOut',
+    scrollTrigger: true,
+  })
 
   return (
     <section className="mt-16">
@@ -38,7 +47,12 @@ const AboutMe = () => {
       </div>
       {/* (About Me) */}
       <div className="mt-28 px-10 text-center">
-        <span className="font-cal-sans text-orange text-2xl">(About Me)</span>
+        <span
+          ref={titleRef}
+          className="font-cal-sans text-orange inline-block text-2xl"
+        >
+          (About Me)
+        </span>
         <div className="mt-4 flex w-full items-center justify-center">
           {/* <h2 className="font-cal-sans inline-block text-[34px] leading-[1.1] text-black md:text-5xl">
             I am a Fullstack Web Developer <br className="max-md:hidden" />{' '}

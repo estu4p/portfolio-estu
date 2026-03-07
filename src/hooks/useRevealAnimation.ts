@@ -11,6 +11,7 @@ interface RevealOptions {
   duration?: number
   ease?: string
   spring?: boolean
+  scrollTrigger?: boolean
 }
 
 export const useRevealAnimation = <T extends HTMLElement>(
@@ -24,14 +25,14 @@ export const useRevealAnimation = <T extends HTMLElement>(
     duration = 0.8,
     ease = 'power2.out',
     spring = false,
+    scrollTrigger,
   } = options
 
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
+    if (!ref.current) return
 
     gsap.fromTo(
-      el,
+      ref.current,
       {
         x,
         y,
@@ -44,11 +45,13 @@ export const useRevealAnimation = <T extends HTMLElement>(
         duration,
         delay,
         ease: spring ? 'elastic.out(0.7, 0.5)' : ease,
-        // scrollTrigger: {
-        //   trigger: el,
-        //   start: 'top 85%',
-        //   toggleActions: 'play none none none',
-        // },
+        scrollTrigger: scrollTrigger
+          ? {
+              trigger: ref.current,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            }
+          : undefined,
       },
     )
   }, [ref, x, y, delay, duration, ease, spring])

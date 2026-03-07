@@ -1,5 +1,5 @@
 import headerBg from '@/assets/icons/header.svg'
-import { useRevealAnimation } from '../../hooks/useRefealAnimation'
+import { useRevealAnimation } from '../../hooks/useRevealAnimation'
 import { useRef } from 'react'
 
 const Header = () => {

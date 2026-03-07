@@ -3,7 +3,7 @@ import { NAV_LINKS } from '../../constants'
 import Button from '../ui/Button'
 import { Equal } from 'lucide-react'
 import Header from '../ui/Header'
-import { useRevealAnimation } from '../../hooks/useRefealAnimation'
+import { useRevealAnimation } from '../../hooks/useRevealAnimation'
 
 const Navbar = () => {
   const [navMobileOpen, setNavMobileOpen] = useState(false)
