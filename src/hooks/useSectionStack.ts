@@ -6,7 +6,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 export const useSectionStack = () => {
   useEffect(() => {
-    const sections = gsap.utils.toArray<HTMLElement>('.project-section')
+    const sections = gsap.utils.toArray<HTMLElement>('.pppp')
+    // const sections = gsap.utils.toArray<HTMLElement>('.project-section')
 
     sections.forEach((section, index) => {
       if (index !== 0) {

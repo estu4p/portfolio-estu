@@ -17,9 +17,9 @@ const AboutMeCard = () => {
   })
 
   useRevealAnimation(descRef, {
-    y: 50,
-    duration: 1,
-    delay: 0.2,
+    y: 12,
+    duration: 0.6,
+    delay: 0.4,
     ease: 'power2.inOut',
     scrollTrigger: {
       start: 'top 80%',
