@@ -18,9 +18,20 @@ const ExperienceCard = ({
   photo,
   desc,
 }: ExperienceCardProps) => {
-  const descRef = useRef<HTMLParagraphElement>(null)
+  const rightRef = useRef<HTMLDivElement>(null)
+  const leftRef = useRef<HTMLDivElement>(null)
 
-  useRevealAnimation(descRef, {
+  useRevealAnimation(rightRef, {
+    y: 12,
+    duration: 0.6,
+    delay: 0.4,
+    ease: 'power2.inOut',
+    scrollTrigger: {
+      start: 'top 80%',
+    },
+  })
+
+  useRevealAnimation(leftRef, {
     y: 12,
     duration: 0.6,
     delay: 0.4,
@@ -32,7 +43,7 @@ const ExperienceCard = ({
 
   return (
     <div className="relative flex flex-col justify-between md:flex-row">
-      <div className="md:mt-40 md:w-[30%]">
+      <div ref={leftRef} className="md:mt-40 md:w-[30%]">
         <div className="flex items-center gap-4">
           <Badge text={badge} />
           <span className="text-accent text-base">01 </span>
@@ -59,10 +70,11 @@ const ExperienceCard = ({
           className="h-121.75 w-107 rounded-3xl object-cover brightness-90"
         />
       </div>
-      <div className="my-auto flex w-full flex-col items-end max-md:mt-7 md:w-[30%]">
-        <p ref={descRef} className="text-accent leading-normal md:w-[80%]">
-          {desc}
-        </p>
+      <div
+        ref={rightRef}
+        className="my-auto flex w-full flex-col items-end max-md:mt-7 md:w-[30%]"
+      >
+        <p className="text-accent leading-normal md:w-[80%]">{desc}</p>
       </div>
     </div>
   )

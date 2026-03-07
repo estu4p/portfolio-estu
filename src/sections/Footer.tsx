@@ -1,10 +1,24 @@
+import { useRef } from 'react'
 import footerImage from '../assets/images/img-footer.jpg'
 import { FOOTER_LINKS } from '../constants'
+import { useRevealAnimation } from '../hooks/useRevealAnimation'
 
 const Footer = () => {
+  const cardRef = useRef<HTMLDivElement>(null)
+
+  useRevealAnimation(cardRef, {
+    y: 50,
+    duration: 1,
+    delay: 0.1,
+    ease: 'power2.inOut',
+    scrollTrigger: {
+      start: 'top 80%',
+    },
+  })
   return (
     <section className="relative h-195 overflow-hidden p-2">
       <div
+        ref={cardRef}
         className="h-full w-full rounded-4xl bg-cover bg-no-repeat px-5 py-10 md:px-7.5"
         style={{ backgroundImage: `url(${footerImage})` }}
       >
