@@ -38,7 +38,7 @@ const TechnicalSkills = () => {
       <div className="relative mt-16 overflow-x-hidden px-5">
         <div
           ref={marqueeRef}
-          className="absolute top-1/2 -z-10 flex w-full -translate-y-1/2 items-center gap-16 text-nowrap"
+          className="absolute top-1/2 -z-10 flex w-full -translate-y-1/2 items-center gap-16 whitespace-nowrap"
         >
           <h3 className="font-cal-sans text-orange text-9xl leading-none">
             Front-End

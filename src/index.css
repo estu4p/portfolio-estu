@@ -18,6 +18,23 @@ body {
   @apply text-secondary bg-background-secondary font-inter overflow-x-hidden text-sm;
 }
 
+/* section {
+  @apply h-full transform-gpu will-change-transform;
+} */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
 /* 
 :root {
   font-family: var(--font-sans);
