@@ -9,7 +9,10 @@ const useSectionStack = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (!ref.current) return
 
     const ctx = gsap.context(() => {
-      const sections = gsap.utils.toArray<HTMLElement>('.project-section')
+      const sections = gsap.utils.toArray<HTMLElement>(
+        '.project-section',
+        ref.current,
+      )
 
       sections.forEach((section, index) => {
         // card ke 3 tidak ada efek

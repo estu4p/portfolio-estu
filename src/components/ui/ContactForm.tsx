@@ -82,9 +82,6 @@ const ContactForm = () => {
           placeholder="Enter your Project Description"
         />
       </div>
-      {/* <button className="bg-background hover:bg-background/70 w-full rounded-full py-2 transition-colors duration-300">
-        <span className="text-accent">Send Now!</span>
-      </button> */}
       <SendButton loading={loading} />
     </form>
   )
