@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="max-container w-full">
       <Navbar />
-      <main className="overflow-x-hidden">
+      <main className="relative">
         <Hero />
         <Banner />
         <AboutMe />

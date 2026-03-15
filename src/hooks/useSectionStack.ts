@@ -1,45 +1,49 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const useSectionStack = () => {
-  useEffect(() => {
-    const sections = gsap.utils.toArray<HTMLElement>('.pppp')
-    // const sections = gsap.utils.toArray<HTMLElement>('.project-section')
+const useSectionStack = (ref: React.RefObject<HTMLDivElement | null>) => {
+  useLayoutEffect(() => {
+    if (!ref.current) return
 
-    sections.forEach((section, index) => {
-      if (index !== 0) {
-        gsap.set(section, {
-          opacity: 0.08,
-          scale: 0.6,
-          rotate: -10,
-        })
-      }
+    const ctx = gsap.context(() => {
+      const sections = gsap.utils.toArray<HTMLElement>('.project-section')
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: 'center center',
-          end: 'bottom top',
-          scrub: true,
-        },
+      sections.forEach((section, index) => {
+        // card ke 3 tidak ada efek
+        if (index === 2) return
+
+        const transformSettings = [
+          { opacity: 0.02, scale: 0.7, rotate: 10 }, // card 1
+          { opacity: 0.08, scale: 0.6, rotate: 6 }, // card 2
+        ]
+
+        const settings = transformSettings[index]
+
+        gsap.fromTo(
+          section,
+          {
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+          },
+          {
+            ...settings,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: section,
+              start: 'bottom bottom',
+              scrub: true,
+            },
+          },
+        )
       })
+    }, ref)
 
-      tl.to(section, {
-        opacity: 1,
-        scale: 1,
-        rotate: 0,
-        duration: 0.3,
-        ease: 'elastic.out(1,0.2)',
-      }).to(section, {
-        opacity: 0.02,
-        scale: 0.7,
-        rotate: 10,
-        duration: 0.3,
-        ease: 'elastic.out(1,0.2)',
-      })
-    })
-  }, [])
+    return () => ctx.revert()
+  }, [ref])
 }
+
+export default useSectionStack

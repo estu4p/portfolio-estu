@@ -1,28 +1,18 @@
 import { useRef } from 'react'
 import ProjectCard from '../components/ui/ProjectCard'
 import { PROJECTS_DATA } from '../constants'
-import { useSectionStack } from '../hooks/useSectionStack'
 import { useRevealAnimation } from '../hooks/useRevealAnimation'
+import useSectionStack from '../hooks/useSectionStack'
 
 const Projects = () => {
   const sectionRef = useRef<HTMLElement>(null)
-  const cardRef = useRef<HTMLDivElement>(null)
-  useSectionStack()
+  const projectCardRef = useRef<HTMLDivElement>(null)
+  useSectionStack(projectCardRef)
 
   useRevealAnimation(sectionRef, {
     y: 50,
     duration: 0.4,
     ease: 'back.out(1.7)',
-    scrollTrigger: {
-      start: 'top 80%',
-    },
-  })
-
-  useRevealAnimation(cardRef, {
-    y: 50,
-    duration: 1,
-    delay: 0.1,
-    ease: 'power2.inOut',
     scrollTrigger: {
       start: 'top 80%',
     },
@@ -37,12 +27,12 @@ const Projects = () => {
         </span>
         <h2 className="text-title">Work Highlight</h2>
       </div>
-      <div ref={cardRef} className="flex flex-col gap-2">
+      <div ref={projectCardRef} className="relative flex flex-col gap-25">
         {PROJECTS_DATA.map((project, index) => (
           <div
             id={project.id}
             key={index}
-            className="project-section will-change-transform"
+            className="project-section sticky -top-96 will-change-transform md:top-5"
           >
             <ProjectCard {...project} />
           </div>

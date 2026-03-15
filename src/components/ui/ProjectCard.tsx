@@ -24,7 +24,7 @@ const ProjectCard = ({
   return (
     <div
       id={id}
-      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden rounded-4xl p-5 md:p-3.25 lg:h-195"
+      className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-4xl p-5 md:h-screen md:p-3.25"
     >
       {/* blur */}
       <div
