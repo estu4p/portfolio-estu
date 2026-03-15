@@ -19,8 +19,10 @@ const Footer = () => {
     <section className="relative h-195 overflow-hidden p-2">
       <div
         ref={cardRef}
-        className="h-full w-full rounded-4xl bg-cover bg-no-repeat px-5 py-10 md:px-7.5"
-        style={{ backgroundImage: `url(${footerImage})` }}
+        className="h-full w-full rounded-4xl bg-cover bg-center bg-no-repeat p-5 md:px-7.5 md:py-10"
+        style={{
+          backgroundImage: `url(${footerImage})`,
+        }}
       >
         <div className="flex flex-col justify-between gap-7 md:w-[30%] md:flex-row">
           {FOOTER_LINKS.map((link) => (

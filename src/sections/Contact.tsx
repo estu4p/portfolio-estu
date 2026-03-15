@@ -45,8 +45,10 @@ const Contact = () => {
       {/* card section */}
       <div
         ref={cardRef}
-        className="relative h-full w-full overflow-x-hidden rounded-4xl bg-cover bg-center bg-no-repeat px-5 py-10 md:px-7.5"
-        style={{ backgroundImage: `url(${contactImage})` }}
+        className="relative h-full w-full overflow-x-hidden rounded-4xl bg-cover bg-center bg-no-repeat p-5 md:px-7.5 md:py-10"
+        style={{
+          backgroundImage: `url(${contactImage})`,
+        }}
       >
         <div className="flex flex-col max-md:mb-40 md:flex-row">
           {/* left */}
@@ -61,8 +63,8 @@ const Contact = () => {
               Let's discuss how I can help bring your ideas to life.
             </p>
           </div>
-          {/* right */}
-          <div className="flex w-[80%] justify-end max-md:mt-10 md:w-1/2">
+          {/* right/form */}
+          <div className="flex w-full justify-end max-md:mt-10 md:w-1/2">
             <form className="w-full space-y-8 md:w-114">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-base text-white">
@@ -106,7 +108,7 @@ const Contact = () => {
         {/* marquee */}
         <div
           ref={marqueeRef}
-          className="absolute right-7.5 bottom-10 left-7.5 flex items-center gap-8 text-nowrap"
+          className="absolute right-7.5 bottom-5 left-7.5 flex items-center gap-8 text-nowrap md:bottom-10"
         >
           {Array.from({ length: 4 }).map((_, index) => (
             <div key={index} className="flex items-center gap-7.5">
