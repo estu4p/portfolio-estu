@@ -51,7 +51,10 @@ const Banner = () => {
   }, [])
 
   return (
-    <section className="bg-background rounded-b-4xl px-2 pt-8 pb-14">
+    <section
+      id="banner"
+      className="bg-background rounded-b-4xl px-2 pt-8 pb-14"
+    >
       <div className="relative aspect-video w-full">
         <img
           ref={bannerRef}

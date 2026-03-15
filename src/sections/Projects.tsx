@@ -19,7 +19,7 @@ const Projects = () => {
   })
 
   return (
-    <section ref={sectionRef} className="relative mt-48 p-2">
+    <section id="projects" ref={sectionRef} className="relative mt-48 p-2">
       {/* title */}
       <div className="box-title">
         <span className="text-secondary mb-2 block text-center">

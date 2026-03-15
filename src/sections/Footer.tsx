@@ -16,7 +16,7 @@ const Footer = () => {
     },
   })
   return (
-    <section className="relative h-195 overflow-hidden p-2">
+    <section id="footer" className="relative h-195 overflow-hidden p-2">
       <div
         ref={cardRef}
         className="h-full w-full rounded-4xl bg-cover bg-center bg-no-repeat p-5 md:px-7.5 md:py-10"

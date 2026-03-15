@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/cal-sans": "^5.2.3",
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.2.1",

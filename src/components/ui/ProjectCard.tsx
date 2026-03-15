@@ -42,7 +42,7 @@ const ProjectCard = ({
           <p className="text-white80">{desc}</p>
           <div className="">
             <div className="">
-              <span className="text-white">01 </span>
+              <span className="text-white">0{id} </span>
               <span className="text-white80">/ 03</span>
               <hr className="mt-4 w-11 border-white/40" />
             </div>

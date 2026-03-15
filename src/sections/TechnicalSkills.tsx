@@ -14,7 +14,7 @@ const TechnicalSkills = () => {
   useMarqueeReveal(marqueeRef)
 
   useRevealAnimation(imageRef, {
-    x: 110,
+    x: 118,
     duration: 0.6,
     delay: 0.4,
     ease: 'power2.inOut',
@@ -24,7 +24,10 @@ const TechnicalSkills = () => {
   })
 
   return (
-    <section className="relative mt-28 h-full overflow-x-hidden md:mt-20">
+    <section
+      id="technicalSkills"
+      className="relative mt-28 h-full overflow-x-hidden md:mt-20"
+    >
       {/* title */}
       <div className="px-5 md:ml-16">
         <span className="text-secondary mb-4 block">(Tech Stack)</span>

@@ -16,7 +16,11 @@ const Experience = () => {
   })
 
   return (
-    <section ref={sectionRef} className="relative mt-50 px-5 md:px-10">
+    <section
+      id="experience"
+      ref={sectionRef}
+      className="relative mt-50 px-5 md:px-10"
+    >
       {/* title */}
       <div className="box-title">
         <span className="text-secondary mb-2 block text-center">

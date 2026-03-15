@@ -7,6 +7,7 @@ import useTextBlur from '../hooks/useTextBlur'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useRevealAnimation } from '../hooks/useRevealAnimation'
+import ContactForm from '../components/ui/ContactForm'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -37,7 +38,11 @@ const Contact = () => {
   })
 
   return (
-    <section ref={sectionRef} className="relative mt-50 px-2 md:h-195">
+    <section
+      id="contact"
+      ref={sectionRef}
+      className="relative mt-50 px-2 md:h-195"
+    >
       <div className="box-title">
         <span className="text-secondary mb-2 block text-center">(Contact)</span>
         <h2 className="text-title">Let's Connect</h2>
@@ -65,44 +70,7 @@ const Contact = () => {
           </div>
           {/* right/form */}
           <div className="flex w-full justify-end max-md:mt-10 md:w-1/2">
-            <form className="w-full space-y-8 md:w-114">
-              <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="text-base text-white">
-                  Your Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  className="border-b-secondary border-b py-2 text-white placeholder:text-white/80 focus:ring-0 focus:outline-none"
-                  placeholder="Enter your Name"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-base text-white">
-                  Your Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  className="border-b-secondary border-b py-2 text-white placeholder:text-white/80 focus:ring-0 focus:outline-none"
-                  placeholder="Enter your Email"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="description" className="text-base text-white">
-                  Project Description
-                </label>
-                <textarea
-                  id="description"
-                  rows={4}
-                  className="border-b-secondary border-b py-2 text-white placeholder:text-white/80 focus:ring-0 focus:outline-none"
-                  placeholder="Enter your Project Description"
-                />
-              </div>
-              <button className="bg-background hover:bg-background/70 w-full rounded-full py-2 transition-colors duration-300">
-                <span className="text-accent">Send Now!</span>
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
         {/* marquee */}

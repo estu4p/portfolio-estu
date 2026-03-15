@@ -18,7 +18,7 @@ const AboutMe = () => {
   })
 
   return (
-    <section className="mt-16">
+    <section id="aboutMe" className="mt-16">
       {/* marquee */}
       <div className="relative flex flex-col items-center justify-center gap-12 overflow-hidden py-20">
         <MarqueeAboutMe
