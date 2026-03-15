@@ -14,12 +14,12 @@ const useMobileNavAnimation = (
 
     tl.current.fromTo(
       menuRef.current,
-      { y: -300, opacity: 0 },
+      { y: -50, opacity: 0 },
       {
         y: 0,
         opacity: 1,
         duration: 0.7,
-        delay: 0.6,
+        delay: 0.2,
         ease: 'elastic.out(0.2, 0.9)', // spring feel
       },
     )
