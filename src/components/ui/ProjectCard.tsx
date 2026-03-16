@@ -1,4 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
+import { useRef } from 'react'
+import useTextBlur from '../../hooks/useTextBlur'
 
 interface ProjectsProps {
   id: string
@@ -21,6 +23,12 @@ const ProjectCard = ({
   features,
   previewLink,
 }: ProjectsProps) => {
+  const textBlur = useRef<HTMLHeadingElement>(null)
+
+  useTextBlur(textBlur, {
+    scrollTriggerStart: 'top 80%',
+  })
+
   return (
     <div
       id={id}
@@ -46,7 +54,10 @@ const ProjectCard = ({
               <span className="text-white80">/ 03</span>
               <hr className="mt-4 w-11 border-white/40" />
             </div>
-            <span className="font-cal-sans -mb-5 block text-[64px] leading-none text-white">
+            <span
+              ref={textBlur}
+              className="font-cal-sans -mb-5 block text-[64px] leading-none text-white"
+            >
               {project}
             </span>
           </div>

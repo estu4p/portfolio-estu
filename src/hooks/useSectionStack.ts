@@ -34,7 +34,7 @@ const useSectionStack = (ref: React.RefObject<HTMLDivElement | null>) => {
           },
           {
             ...settings,
-            ease: 'power2.out',
+            ease: 'none',
             scrollTrigger: {
               trigger: section,
               start: 'bottom 95%',

@@ -4,7 +4,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const useTextBlur = <T extends HTMLElement>(ref: React.RefObject<T | null>) => {
+interface TextBlurOptions {
+  scrollTriggerStart?: string
+}
+
+const useTextBlur = <T extends HTMLElement>(
+  ref: React.RefObject<T | null>,
+  scrollTriggerStart?: TextBlurOptions,
+) => {
+  const trigerStart = scrollTriggerStart?.scrollTriggerStart || 'top center'
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (!ref.current) return
@@ -35,7 +44,7 @@ const useTextBlur = <T extends HTMLElement>(ref: React.RefObject<T | null>) => {
           stagger: 0.05,
           scrollTrigger: {
             trigger: element,
-            start: 'top center',
+            start: trigerStart || 'top center',
             toggleActions: 'play none none none',
           },
         },
