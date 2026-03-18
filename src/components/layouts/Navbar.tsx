@@ -84,7 +84,17 @@ const Navbar = () => {
           </div>
           {/* contact */}
           <div className="hidden md:block">
-            <Button title="Contact" />
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault()
+                lenisRef.current?.scrollTo('#contact', {
+                  duration: 1.2,
+                })
+              }}
+            >
+              <Button title="Contact" />
+            </a>
           </div>
           <button
             onClick={handleNavMobileOpen}
@@ -131,10 +141,22 @@ const Navbar = () => {
             ))}
           </div>
           <div className="mt-7.5 w-full">
-            <Button
-              title="Contact"
-              className="flex w-full items-center justify-center"
-            />
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault()
+                lenisRef.current?.scrollTo('#contact', {
+                  offset: -80,
+                  duration: 1.2,
+                })
+                setNavMobileOpen(false)
+              }}
+            >
+              <Button
+                title="Contact"
+                className="flex w-full items-center justify-center"
+              />
+            </a>
           </div>
         </div>
       </nav>

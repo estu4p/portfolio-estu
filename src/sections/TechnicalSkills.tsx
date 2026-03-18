@@ -19,7 +19,7 @@ const TechnicalSkills = () => {
     delay: 0.4,
     ease: 'power2.inOut',
     scrollTrigger: {
-      start: 'top center',
+      start: 'top 70%',
     },
   })
 

@@ -10,12 +10,19 @@ export const useMarqueeReveal = <T extends HTMLElement>(
   useEffect(() => {
     if (!ref.current) return
 
+    const el = ref.current
+
     const ctx = gsap.context(() => {
-      gsap.to(ref.current, {
-        xPercent: -50,
+      const width = el.scrollWidth / 2
+
+      gsap.set(el, { x: 0 })
+
+      gsap.to(el, {
+        x: -width,
         duration: 20,
-        ease: 'linear',
+        ease: 'none',
         repeat: -1,
+        force3D: true,
       })
     }, ref)
 

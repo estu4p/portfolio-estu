@@ -74,18 +74,24 @@ const Contact = () => {
           </div>
         </div>
         {/* marquee */}
-        <div
-          ref={marqueeRef}
-          className="absolute right-7.5 bottom-5 left-7.5 flex items-center gap-8 text-nowrap md:bottom-10"
-        >
-          {Array.from({ length: 4 }).map((_, index) => (
-            <div key={index} className="flex items-center gap-7.5">
-              <h3 className="font-cal-sans hover:text-orange text-[32px] text-white">
-                contact@estu.dev
-              </h3>
-              <img src={icon1} alt="Icon" className="h-4 w-4" />
-            </div>
-          ))}
+        <div className="marquee-mask absolute right-7.5 bottom-5 left-7.5 overflow-hidden md:bottom-10">
+          <div
+            ref={marqueeRef}
+            className="flex w-max items-center gap-8 whitespace-nowrap will-change-transform"
+          >
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex items-center gap-8">
+                {Array.from({ length: 4 }).map((_, index) => (
+                  <div key={index} className="flex items-center gap-7.5">
+                    <h3 className="font-cal-sans text-[32px] text-white">
+                      contact@estu.dev
+                    </h3>
+                    <img src={icon1} alt="Icon" className="h-4 w-4" />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       {/*  */}

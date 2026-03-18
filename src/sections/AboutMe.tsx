@@ -25,7 +25,7 @@ const AboutMe = () => {
           className="-rotate-[7deg] bg-black py-4 md:-rotate-6"
           speed={25}
           items={[
-            '10 Year Experience',
+            '3 Year Experience',
             'Full-Stack Developer',
             'System Architecture',
             'Scalable Web Solutions',
@@ -35,7 +35,7 @@ const AboutMe = () => {
           className="bg-orange absolute left-1/2 -translate-x-1/2 rotate-z-[7deg] py-4 md:rotate-z-6"
           speed={25}
           items={[
-            '10 Year Experience',
+            '3 Year Experience',
             'Full-Stack Developer',
             'System Architecture',
             'Scalable Web Solutions',
@@ -51,15 +51,6 @@ const AboutMe = () => {
           (About Me)
         </span>
         <div className="mt-4 flex w-full items-center justify-center">
-          {/* <h2 className="font-cal-sans inline-block text-[34px] leading-[1.1] text-black md:text-5xl">
-            I am a Fullstack Web Developer <br className="max-md:hidden" />{' '}
-            experienced in building modern,
-            <span className="text-secondary">
-              {' '}
-              scalable <br className="max-lg:hidden" /> web applications from
-              concept to deployment.
-            </span>
-          </h2> */}
           <div className="w-full md:w-[70%]">
             <RevealTextAboutMe text="I am a Fullstack Web Developer experienced in building modern, scalable web applications from concept to deployment." />
           </div>
