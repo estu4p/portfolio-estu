@@ -4,19 +4,25 @@ import { useRef } from 'react'
 import { useRevealAnimation } from '../../hooks/useRevealAnimation'
 
 interface ExperienceCardProps {
+  id: number
   badge: string
   name: string
   year: string
   photo: string
   desc: string
+  onNext?: () => void
+  onPrev?: () => void
 }
 
 const ExperienceCard = ({
+  id,
   badge,
   name,
   year,
   photo,
   desc,
+  onNext,
+  onPrev,
 }: ExperienceCardProps) => {
   const rightRef = useRef<HTMLDivElement>(null)
   const leftRef = useRef<HTMLDivElement>(null)
@@ -41,13 +47,17 @@ const ExperienceCard = ({
     },
   })
 
+  // console.log(onNext, onPrev)
+
   return (
     <div className="relative flex flex-col justify-between md:flex-row">
       <div ref={leftRef} className="md:mt-40 md:w-[30%]">
         <div className="flex items-center gap-4">
           <Badge text={badge} />
-          <span className="text-accent text-base">01 </span>
-          <span className="text-accent/60 text-base">/ 03</span>
+          <div className="">
+            <span className="text-accent text-base">0{id} </span>
+            <span className="text-accent/60 text-base">/ 03</span>
+          </div>
         </div>
         <hr className="border-secondary/40 my-7" />
         <span className="text-secondary block">{name}</span>
@@ -55,12 +65,18 @@ const ExperienceCard = ({
           {year}
         </span>
         <div className="-top-12 right-0 mt-12 flex items-center gap-4 max-md:absolute">
-          <div className="box-badge flex h-fit w-fit items-center justify-center rounded-full p-3">
+          <button
+            onClick={onPrev}
+            className="box-badge flex h-fit w-fit cursor-pointer items-center justify-center rounded-full p-3"
+          >
             <ChevronLeft className="h-5 w-5 text-white/80" />
-          </div>
-          <div className="box-badge flex h-fit w-fit items-center justify-center rounded-full p-3">
+          </button>
+          <button
+            onClick={onNext}
+            className="box-badge flex h-fit w-fit cursor-pointer items-center justify-center rounded-full p-3"
+          >
             <ChevronRight className="h-5 w-5 text-white/80" />
-          </div>
+          </button>
         </div>
       </div>
       <div className="mx-auto mt-7 w-fit md:mt-0">

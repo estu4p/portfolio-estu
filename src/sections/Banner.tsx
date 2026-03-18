@@ -40,7 +40,7 @@ const Banner = () => {
           ease: 'cubic-bezier(0.09, 0.89, 0.34, 1.03)',
           scrollTrigger: {
             trigger: bannerRef.current,
-            start: 'top 80%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         },
