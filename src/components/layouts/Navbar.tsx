@@ -43,13 +43,27 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar bg-background top-0 z-50 max-md:sticky">
+    <div id="navbar" className="navbar bg-background top-0 z-50 max-md:sticky">
       <Header />
-      <nav ref={navRef} className="relative px-5 pt-8 pb-3 md:px-10 md:pb-0">
-        <div className="relative z-30 flex items-center justify-between">
+      <nav ref={navRef} className="relative">
+        <div className="bg-background relative z-30 flex items-center justify-between px-5 pt-8 pb-3 md:px-10 md:pb-0">
           {/* logo */}
           <div className="text-orange font-cal-sans text-4xl leading-0.5">
-            <h1>Estu.</h1>
+            <h1>
+              {' '}
+              <a
+                href="#hero"
+                onClick={(e) => {
+                  e.preventDefault()
+                  lenisRef.current?.scrollTo('#hero', {
+                    offset: -80,
+                    duration: 1.2,
+                  })
+                }}
+              >
+                Estu.
+              </a>
+            </h1>
           </div>
           {/* navigation */}
           <div className="hidden items-center gap-10 md:flex">
@@ -99,7 +113,6 @@ const Navbar = () => {
           <div className="mt- flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
               <a
-                // ref={addToLinksRef}
                 key={link.label}
                 href={link.href}
                 onClick={(e) => {
