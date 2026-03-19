@@ -82,3 +82,37 @@ html.lenis body {
     transparent 100%
   );
 }
+
+/* .marquee-mask-white {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    white 15%,
+    white 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    white 15%,
+    white 85%,
+    transparent 100%
+  );
+} */
+
+.marquee-mask-white {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    white 15%,
+    white 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    white 15%,
+    white 90%,
+    transparent 100%
+  );
+}

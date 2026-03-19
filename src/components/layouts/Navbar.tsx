@@ -43,9 +43,12 @@ const Navbar = () => {
   }
 
   return (
-    <div id="navbar" className="navbar bg-background top-0 z-50 max-md:sticky">
+    <div
+      id="navbar"
+      className="navbar bg-background z-50 w-full max-md:fixed max-md:top-0 max-md:left-1/2 max-md:-translate-x-1/2"
+    >
       <Header />
-      <nav ref={navRef} className="relative">
+      <nav ref={navRef} className="relative transform-gpu will-change-scroll">
         <div className="bg-background relative z-30 flex items-center justify-between px-5 pt-8 pb-3 md:px-10 md:pb-0">
           {/* logo */}
           <div className="text-orange font-cal-sans text-4xl leading-0.5">
