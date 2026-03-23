@@ -22,7 +22,7 @@ const Hero = () => {
   })
 
   return (
-    <section id="hero" className="bg-background pt-50">
+    <section id="hero" className="bg-background pt-50 md:pt-28">
       <div className="mx-auto text-center">
         <p ref={hiRef} className="text-secondary mb-4 text-xl">
           Hi there, I'm Estu

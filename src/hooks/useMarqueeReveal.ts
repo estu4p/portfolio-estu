@@ -19,7 +19,7 @@ export const useMarqueeReveal = <T extends HTMLElement>(
 
       gsap.to(el, {
         x: -width,
-        duration: 20,
+        duration: 40,
         ease: 'none',
         repeat: -1,
         force3D: true,

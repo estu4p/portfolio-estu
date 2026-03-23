@@ -1,18 +1,12 @@
 import { useRef } from 'react'
 import icon1Orange from '../assets/icons/icons1-orange.svg'
-import banner from '../assets/images/banner.jpg'
 import { useMarqueeReveal } from '../hooks/useMarqueeReveal'
 import useTextBlur from '../hooks/useTextBlur'
 import { useRevealAnimation } from '../hooks/useRevealAnimation'
+import TechnicalSkillCard from '../components/ui/TechnicalSkillCard'
+import { TECHNICAL_SKILLS_DATA } from '../constants/technicalSkills'
 
-const MarqueeItems = [
-  'Front-End',
-  'Front-end',
-  'Front-End',
-  'Front-End',
-  'Front-end',
-  'Front-End',
-]
+const MarqueeItems = ['Front-End', 'Back-End', 'Database', 'Tools']
 
 const TechnicalSkills = () => {
   const marqueeRef = useRef<HTMLDivElement>(null)
@@ -48,12 +42,12 @@ const TechnicalSkills = () => {
         </h2>
       </div>
       <div className="relative mt-16 overflow-x-hidden px-5">
-        <div className="marquee-mask-white absolute top-1/2 -z-10 hidden h-fit w-full -translate-y-1/2 items-center justify-center bg-red-400 md:flex">
+        <div className="marquee-mask-white absolute top-1/2 -z-10 hidden h-fit w-full -translate-y-1/2 items-center justify-center md:flex">
           <div
             ref={marqueeRef}
             className="flex w-full items-center gap-16 whitespace-nowrap"
           >
-            {MarqueeItems.map((item, index) => (
+            {[...MarqueeItems, ...MarqueeItems].map((item, index) => (
               <div key={index} className="flex items-center">
                 <h3 className="font-cal-sans text-orange mx-16 text-9xl leading-none">
                   {item}
@@ -67,24 +61,6 @@ const TechnicalSkills = () => {
             ))}
           </div>
         </div>
-        {/* <div
-          ref={marqueeRef}
-          className="marquee-mask-white absolute top-1/2 -z-10 flex w-full -translate-y-1/2 items-center gap-16 whitespace-nowrap"
-        >
-          <h3 className="font-cal-sans text-orange text-9xl leading-none">
-            Front-End
-          </h3>
-          <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
-          
-          <h3 className="font-cal-sans text-orange text-9xl leading-none">
-            Back-End
-          </h3>
-          <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
-          <h3 className="font-cal-sans text-orange text-9xl leading-none">
-            End-End
-          </h3>
-          <img src={icon1Orange} alt="Front End Icon" className="h-16 w-16" />
-        </div> */}
         <div className="border-t-secondary/20 text-secondary flex items-center justify-between border-t pt-8 font-medium md:mx-10">
           <button className="text-orange flex cursor-pointer items-center gap-3 font-medium">
             {' '}
@@ -95,13 +71,18 @@ const TechnicalSkills = () => {
           <button className="cursor-pointer">Tools</button>
         </div>
         <div className="mt-16 flex h-full flex-col items-center justify-center">
-          <div ref={imageRef} className="h-91.5 max-w-137.5">
+          {/* <div ref={imageRef} className="h-91.5 max-w-137.5">
             <img
               src={banner}
               alt="Banner"
               className="h-full w-full rounded-3xl object-cover"
             />
-          </div>
+          </div> */}
+          {TECHNICAL_SKILLS_DATA.map((tech, index) => (
+            <div className="h-72 w-full max-w-137.5" key={index}>
+              <TechnicalSkillCard {...tech} />
+            </div>
+          ))}
           <p className="text-primary mt-8 w-[70%] text-center md:w-[40%]">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Praesentium, optio? Velit, dicta magnam assumenda quis suscipit
