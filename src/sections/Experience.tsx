@@ -46,7 +46,7 @@ const Experience = () => {
         gsap.to(cards[prevIndex], {
           scale: 0.9,
           opacity: 0.5,
-          filter: 'blur(4px)',
+          // filter: 'blur(4px)',
           duration: 0.3,
         })
 
