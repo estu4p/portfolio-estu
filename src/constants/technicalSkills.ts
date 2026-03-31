@@ -11,6 +11,76 @@ import phpIcon from '../assets/icons/tech/PHP.svg'
 import nextIcon from '../assets/icons/tech/Next.js.svg'
 import mysqlIcon from '../assets/icons/tech/MySQL.svg'
 import postgresIcon from '../assets/icons/tech/PostgresSQL.svg'
+import flutterIcon from '../assets/icons/tech/Flutter.svg'
+import expressIcon from '../assets/icons/tech/Express.svg'
+import githubIcon from '../assets/icons/tech/GitHub.svg'
+
+export const TECHNICAL_SKILLS_ICON = [
+  {
+    name: 'HTML',
+    icon: htmlIcon,
+  },
+  {
+    name: 'CSS',
+    icon: cssIcon,
+  },
+  {
+    name: 'React',
+    icon: reactIcon,
+  },
+  {
+    name: 'Vue',
+    icon: vueIcon,
+  },
+  {
+    name: 'Bootstrap',
+    icon: bootstrapIcon,
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: tailwincssIcon,
+  },
+  {
+    name: 'JavaScript',
+    icon: javaScriptIcon,
+  },
+  {
+    name: 'Node.js',
+    icon: nodeIcon,
+  },
+  {
+    name: 'Next.js',
+    icon: nextIcon,
+  },
+  {
+    name: 'PHP',
+    icon: phpIcon,
+  },
+  {
+    name: 'Laravel',
+    icon: laravelIcon,
+  },
+  {
+    name: 'MySQL',
+    icon: mysqlIcon,
+  },
+  {
+    name: 'PostgreSQL',
+    icon: postgresIcon,
+  },
+  {
+    name: 'Flutter',
+    icon: flutterIcon,
+  },
+  {
+    name: 'Express',
+    icon: expressIcon,
+  },
+  {
+    name: 'GitHub',
+    icon: githubIcon,
+  },
+]
 
 export const TECHNICAL_SKILLS_DATA = [
   {
