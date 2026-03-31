@@ -22,9 +22,9 @@ export const useMarqueeReveal = <T extends HTMLElement>(
     const el = ref.current
 
     const ctx = gsap.context(() => {
-      const width = el.scrollWidth / 2
+      const width = Math.round(el.scrollWidth / 2)
 
-      gsap.set(el, { x: 0 })
+      gsap.set(el, { x: 0, force3D: true })
 
       gsap.to(el, {
         x: direction === 'left' ? -width : width,
@@ -32,19 +32,28 @@ export const useMarqueeReveal = <T extends HTMLElement>(
         delay,
         ease: 'none',
         repeat: -1,
+        force3D: true,
         modifiers: {
           x: (x) => {
-            let value = parseFloat(x)
+            const value = parseFloat(x)
 
-            if (direction === 'left') {
-              value = value % width
-            } else {
-              value = value % width
-              if (value > 0) value -= width
-            }
+            const wrapped = gsap.utils.wrap(-width, 0)(value)
+            const snapped = gsap.utils.snap(1)(wrapped)
 
-            return `${value}px`
+            return `${snapped}px`
           },
+          // x: (x) => {
+          //   let value = parseFloat(x)
+
+          //   if (direction === 'left') {
+          //     value = value % width
+          //   } else {
+          //     value = value % width
+          //     if (value > 0) value -= width
+          //   }
+
+          //   return `${value}px`
+          // },
           // x: gsap.utils.wrap(-width, 0),
         },
       })

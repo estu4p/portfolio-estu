@@ -14,16 +14,16 @@ const TechnicalSkills = () => {
 
   useTextBlur(textBlur)
   useMarqueeReveal(marqueeLeftRef, {
-    duration: 35,
+    duration: 20,
   })
   useMarqueeReveal(marqueeRightRef, {
     direction: 'right',
-    duration: 45,
-    delay: 3,
+    duration: 30,
+    delay: 2,
   })
   useMarqueeReveal(marqueeLeft1Ref, {
-    duration: 50,
-    delay: 6,
+    duration: 40,
+    delay: 4,
   })
 
   useRevealAnimation(imageRef, {
@@ -63,28 +63,28 @@ const TechnicalSkills = () => {
         </div>
         <div className="mt-14 flex h-full flex-col items-center justify-center">
           <div className="h-91.5 w-full space-y-8 px-10">
-            <div ref={marqueeLeftRef} className="flex gap-8 whitespace-nowrap">
+            <div ref={marqueeLeftRef} className="flex whitespace-nowrap">
               {[...TECHNICAL_SKILLS_ICON, ...TECHNICAL_SKILLS_ICON].map(
                 (skill, index) => (
-                  <div key={index}>
+                  <div key={index} className="mr-8 shrink-0">
                     <TechnicalSkillIcon icon={skill.icon} name={skill.name} />
                   </div>
                 ),
               )}
             </div>
-            <div ref={marqueeRightRef} className="flex gap-8 whitespace-nowrap">
+            <div ref={marqueeRightRef} className="flex whitespace-nowrap">
               {[...TECHNICAL_SKILLS_ICON, ...TECHNICAL_SKILLS_ICON].map(
                 (skill, index) => (
-                  <div key={index}>
+                  <div key={index} className="mr-8 shrink-0">
                     <TechnicalSkillIcon icon={skill.icon} name={skill.name} />
                   </div>
                 ),
               )}
             </div>
-            <div ref={marqueeLeft1Ref} className="flex gap-8 whitespace-nowrap">
+            <div ref={marqueeLeft1Ref} className="flex whitespace-nowrap">
               {[...TECHNICAL_SKILLS_ICON, ...TECHNICAL_SKILLS_ICON].map(
                 (skill, index) => (
-                  <div key={index}>
+                  <div key={index} className="mr-8 shrink-0">
                     <TechnicalSkillIcon icon={skill.icon} name={skill.name} />
                   </div>
                 ),

@@ -23,7 +23,7 @@ const AboutMe = () => {
       <div className="relative flex flex-col items-center justify-center gap-12 overflow-hidden py-20">
         <MarqueeAboutMe
           className="-rotate-[7deg] bg-black py-4 md:-rotate-6"
-          speed={25}
+          speed={80}
           items={[
             '3 Year Experience',
             'Full-Stack Developer',
