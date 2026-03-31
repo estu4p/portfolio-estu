@@ -61,35 +61,11 @@ const TechnicalSkills = () => {
           <button className="cursor-pointer">Database</button>
           <button className="cursor-pointer">Tools</button>
         </div>
-        <div className="mt-14 flex h-full flex-col items-center justify-center">
-          <div className="h-91.5 w-full space-y-8 px-10">
-            <div ref={marqueeLeftRef} className="flex whitespace-nowrap">
-              {[...TECHNICAL_SKILLS_ICON, ...TECHNICAL_SKILLS_ICON].map(
-                (skill, index) => (
-                  <div key={index} className="mr-8 shrink-0">
-                    <TechnicalSkillIcon icon={skill.icon} name={skill.name} />
-                  </div>
-                ),
-              )}
-            </div>
-            <div ref={marqueeRightRef} className="flex whitespace-nowrap">
-              {[...TECHNICAL_SKILLS_ICON, ...TECHNICAL_SKILLS_ICON].map(
-                (skill, index) => (
-                  <div key={index} className="mr-8 shrink-0">
-                    <TechnicalSkillIcon icon={skill.icon} name={skill.name} />
-                  </div>
-                ),
-              )}
-            </div>
-            <div ref={marqueeLeft1Ref} className="flex whitespace-nowrap">
-              {[...TECHNICAL_SKILLS_ICON, ...TECHNICAL_SKILLS_ICON].map(
-                (skill, index) => (
-                  <div key={index} className="mr-8 shrink-0">
-                    <TechnicalSkillIcon icon={skill.icon} name={skill.name} />
-                  </div>
-                ),
-              )}
-            </div>
+        <div className="flex h-full flex-col items-center justify-center">
+          <div className="marquee-mask my-14 w-full space-y-8 overflow-hidden px-10">
+            <MarqueeRow ref={marqueeLeftRef} />
+            <MarqueeRow ref={marqueeRightRef} />
+            <MarqueeRow ref={marqueeLeft1Ref} />
           </div>
           <p className="text-primary w-full text-center md:w-[40%]">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -103,3 +79,19 @@ const TechnicalSkills = () => {
 }
 
 export default TechnicalSkills
+
+const MarqueeRow = ({
+  ref,
+}: {
+  ref: React.RefObject<HTMLDivElement | null>
+}) => (
+  <div ref={ref} className="flex gap-8 whitespace-nowrap">
+    {[...TECHNICAL_SKILLS_ICON, ...TECHNICAL_SKILLS_ICON].map(
+      (skill, index) => (
+        <div key={index} className="shrink-0">
+          <TechnicalSkillIcon icon={skill.icon} name={skill.name} />
+        </div>
+      ),
+    )}
+  </div>
+)
