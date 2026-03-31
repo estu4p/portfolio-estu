@@ -40,7 +40,7 @@ const RevealTextAboutMe = ({ text }: Props) => {
           {word.split('').map((char, cIndex) => (
             <span
               key={cIndex}
-              className="char text-secondary transition-colors"
+              className="char text-secondary/90 transition-colors"
             >
               {char}
             </span>

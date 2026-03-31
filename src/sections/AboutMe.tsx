@@ -43,7 +43,7 @@ const AboutMe = () => {
         />
       </div>
       {/* (About Me) */}
-      <div className="mt-28 px-10 text-center">
+      <div className="mt-28 px-4 text-center md:px-10">
         <span
           ref={titleRef}
           className="font-cal-sans text-orange inline-block text-2xl"

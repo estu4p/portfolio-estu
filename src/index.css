@@ -82,3 +82,13 @@ html.lenis body {
     transparent 100%
   );
 }
+
+.project-section {
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    will-change: transform, opacity;
+  }
+}
