@@ -6,36 +6,19 @@ import useTextBlur from '../hooks/useTextBlur'
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useRevealAnimation } from '../hooks/useRevealAnimation'
 import ContactForm from '../components/ui/ContactForm'
+import useRevealBatch from '../hooks/useRevealBatch'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Contact = () => {
   const textBlur = useRef<HTMLHeadingElement>(null)
   const marqueeRef = useRef<HTMLDivElement>(null)
-  const cardRef = useRef<HTMLDivElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
 
   useTextBlur(textBlur)
   useMarqueeReveal(marqueeRef)
-  useRevealAnimation(cardRef, {
-    y: 50,
-    duration: 1,
-    delay: 0.1,
-    ease: 'power2.inOut',
-    scrollTrigger: {
-      start: 'top 80%',
-    },
-  })
-  useRevealAnimation(sectionRef, {
-    y: 50,
-    duration: 0.4,
-    ease: 'back.out(1.7)',
-    scrollTrigger: {
-      start: 'top 80%',
-    },
-  })
+  useRevealBatch(sectionRef)
 
   return (
     <section
@@ -45,12 +28,11 @@ const Contact = () => {
     >
       <div className="box-title">
         <span className="text-secondary mb-2 block text-center">(Contact)</span>
-        <h2 className="text-title">Let's Connect</h2>
+        <h2 className="text-title reveal-title">Let's Connect</h2>
       </div>
       {/* card section */}
       <div
-        ref={cardRef}
-        className="relative h-full w-full overflow-x-hidden rounded-4xl bg-cover bg-center bg-no-repeat p-5 md:px-7.5 md:py-10"
+        className="reveal-card relative h-full w-full overflow-x-hidden rounded-4xl bg-cover bg-center bg-no-repeat p-5 md:px-7.5 md:py-10"
         style={{
           backgroundImage: `url(${contactImage})`,
         }}

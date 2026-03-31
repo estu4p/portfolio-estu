@@ -1,10 +1,6 @@
 import banner from '../assets/images/banner.jpg'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useRef } from 'react'
 import { useRevealAnimation } from '../hooks/useRevealAnimation'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const Banner = () => {
   const bannerRef = useRef<HTMLImageElement>(null)

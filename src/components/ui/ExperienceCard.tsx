@@ -1,8 +1,5 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Badge from './Badge'
-import { useRef } from 'react'
-import { useRevealAnimation } from '../../hooks/useRevealAnimation'
-
 interface ExperienceCardProps {
   id: number
   badge: string
@@ -24,34 +21,9 @@ const ExperienceCard = ({
   onNext,
   onPrev,
 }: ExperienceCardProps) => {
-  const rightRef = useRef<HTMLDivElement>(null)
-  const leftRef = useRef<HTMLDivElement>(null)
-
-  useRevealAnimation(rightRef, {
-    y: 12,
-    duration: 0.6,
-    delay: 0.4,
-    ease: 'power2.inOut',
-    scrollTrigger: {
-      start: 'top 80%',
-    },
-  })
-
-  useRevealAnimation(leftRef, {
-    y: 12,
-    duration: 0.6,
-    delay: 0.4,
-    ease: 'power2.inOut',
-    scrollTrigger: {
-      start: 'top 80%',
-    },
-  })
-
-  // console.log(onNext, onPrev)
-
   return (
     <div className="relative flex flex-col justify-between md:flex-row">
-      <div ref={leftRef} className="md:mt-40 md:w-[30%]">
+      <div className="md:mt-40 md:w-[30%]">
         <div className="flex items-center gap-4">
           <Badge text={badge} />
           <div className="">
@@ -86,10 +58,7 @@ const ExperienceCard = ({
           className="h-121.75 w-107 rounded-3xl object-cover brightness-90"
         />
       </div>
-      <div
-        ref={rightRef}
-        className="my-auto flex w-full flex-col items-end max-md:mt-7 md:w-[30%]"
-      >
+      <div className="my-auto flex w-full flex-col items-end max-md:mt-7 md:w-[30%]">
         <p className="text-accent leading-normal md:w-[80%]">{desc}</p>
       </div>
     </div>

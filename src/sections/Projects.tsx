@@ -1,22 +1,15 @@
 import { useRef } from 'react'
 import ProjectCard from '../components/ui/ProjectCard'
 import { PROJECTS_DATA } from '../constants'
-import { useRevealAnimation } from '../hooks/useRevealAnimation'
 import useSectionStack from '../hooks/useSectionStack'
+import useRevealBatch from '../hooks/useRevealBatch'
 
 const Projects = () => {
   const sectionRef = useRef<HTMLElement>(null)
-  const projectCardRef = useRef<HTMLDivElement>(null)
-  useSectionStack(projectCardRef)
+  const cardRef = useRef<HTMLDivElement>(null)
+  useSectionStack(cardRef)
 
-  useRevealAnimation(sectionRef, {
-    y: 50,
-    duration: 0.4,
-    ease: 'back.out(1.7)',
-    scrollTrigger: {
-      start: 'top 80%',
-    },
-  })
+  useRevealBatch(sectionRef)
 
   return (
     <section id="projects" ref={sectionRef} className="relative mt-48 p-2">
@@ -25,9 +18,9 @@ const Projects = () => {
         <span className="text-secondary mb-2 block text-center">
           (Projects)
         </span>
-        <h2 className="text-title">Work Highlight</h2>
+        <h2 className="text-title reveal-title">Work Highlight</h2>
       </div>
-      <div ref={projectCardRef} className="relative flex flex-col gap-25">
+      <div ref={cardRef} className="reveal-card relative flex flex-col gap-25">
         {PROJECTS_DATA.map((project, index) => (
           <div
             id={project.id}
