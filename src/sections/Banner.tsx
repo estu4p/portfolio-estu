@@ -11,7 +11,7 @@ const Banner = () => {
     delay: 0.4,
     ease: 'power2.inOut',
     scrollTrigger: {
-      start: 'top 85%',
+      start: 'top 80%',
     },
   })
 

@@ -12,7 +12,7 @@ const useTextBlur = <T extends HTMLElement>(
   ref: React.RefObject<T | null>,
   scrollTriggerStart?: TextBlurOptions,
 ) => {
-  const trigerStart = scrollTriggerStart?.scrollTriggerStart || 'top center'
+  const trigerStart = scrollTriggerStart?.scrollTriggerStart || 'top 80%'
 
   useEffect(() => {
     const ctx = gsap.context(() => {

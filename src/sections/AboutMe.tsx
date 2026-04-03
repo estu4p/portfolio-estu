@@ -13,7 +13,7 @@ const AboutMe = () => {
     delay: 0,
     ease: 'power2.inOut',
     scrollTrigger: {
-      start: 'top 85%',
+      start: 'top 80%',
     },
   })
 

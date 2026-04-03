@@ -49,7 +49,7 @@ const AnimatedHeroText = ({ children }: { children: React.ReactNode }) => {
           stagger: 0.05,
           scrollTrigger: {
             trigger: wrapperRef.current,
-            start: 'top 85%',
+            start: 'top 80%',
             toggleActions: 'play none none none',
           },
         },

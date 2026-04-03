@@ -1,13 +1,11 @@
 import { useRef } from 'react'
 import { useMarqueeReveal } from '../hooks/useMarqueeReveal'
 import useTextBlur from '../hooks/useTextBlur'
-import { useRevealAnimation } from '../hooks/useRevealAnimation'
 import { TECHNICAL_SKILLS_ICON } from '../constants/technicalSkills'
 import TechnicalSkillIcon from '../components/ui/TechnicalSkillIcon'
 
 const TechnicalSkills = () => {
   const textBlur = useRef<HTMLHeadingElement>(null)
-  const imageRef = useRef<HTMLDivElement>(null)
   const marqueeLeftRef = useRef<HTMLDivElement>(null)
   const marqueeLeft1Ref = useRef<HTMLDivElement>(null)
   const marqueeRightRef = useRef<HTMLDivElement>(null)
@@ -24,16 +22,6 @@ const TechnicalSkills = () => {
   useMarqueeReveal(marqueeLeft1Ref, {
     duration: 40,
     delay: 4,
-  })
-
-  useRevealAnimation(imageRef, {
-    x: 118,
-    duration: 0.6,
-    delay: 0.4,
-    ease: 'power2.inOut',
-    scrollTrigger: {
-      start: 'top 70%',
-    },
   })
 
   return (
