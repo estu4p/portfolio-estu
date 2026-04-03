@@ -36,7 +36,7 @@ const ProjectCard = ({
     >
       {/* blur */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-75"
         style={{
           backgroundImage: `url(${image})`,
           // backgroundPosition: 'right bottom -290px',
@@ -46,7 +46,7 @@ const ProjectCard = ({
       <div className="absolute inset-0 bg-black/20 backdrop-blur-xl" />
       {/* content */}
       <div className="relative z-10 flex flex-col gap-12 md:flex-row">
-        <div className="flex min-h-full w-full flex-col justify-between gap-17.5 md:w-56">
+        <div className="z-10 flex min-h-full w-full flex-col justify-between gap-17.5 md:w-56">
           <p className="text-white80">{desc}</p>
           <div className="">
             <div className="">

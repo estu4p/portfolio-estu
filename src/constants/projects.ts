@@ -1,12 +1,12 @@
-import projectImage1 from '../assets/images/project1.jpg'
-import banner from '../assets/images/banner.jpg'
+import projectDashboardWNC from '../assets/images/project-dashboard-wnc.png'
+import landingPageWNC from '../assets/images/project-landingPageWNC.png'
 
 export const PROJECTS_DATA = [
   {
     id: '1',
-    project: 'Archin',
+    project: 'Wash & Care',
     desc: 'A web-based platform that allows users to create and manage their own online stores, providing features such as product listing, inventory management, and order processing.',
-    image: projectImage1,
+    image: landingPageWNC,
     year: '2025',
     tools: 'React, Node.js, MongoDB',
     features: [
@@ -19,9 +19,9 @@ export const PROJECTS_DATA = [
   },
   {
     id: '2',
-    project: 'Archin B',
+    project: 'Dashboard WnC',
     desc: 'A web-based platform that allows users to create and manage their own online stores, providing features such as product listing, inventory management, and order processing.',
-    image: banner,
+    image: projectDashboardWNC,
     year: '2021',
     tools: 'Laravel, React.js, MySQL',
     features: [
@@ -34,9 +34,9 @@ export const PROJECTS_DATA = [
   },
   {
     id: '3',
-    project: 'Archin C',
+    project: 'Wash & Care',
     desc: 'A web-based platform that allows users to create and manage their own online stores, providing features such as product listing, inventory management, and order processing.',
-    image: banner,
+    image: landingPageWNC,
     year: '2021',
     tools: 'Laravel, React.js, MySQL',
     features: [
