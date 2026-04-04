@@ -32,7 +32,7 @@ const ProjectCard = ({
   return (
     <div
       id={id}
-      className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-4xl p-5 md:h-screen md:p-3.25"
+      className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-4xl p-5 will-change-transform md:h-screen md:p-3.25"
     >
       {/* blur */}
       <div
@@ -56,7 +56,7 @@ const ProjectCard = ({
             </div>
             <span
               ref={textBlur}
-              className="font-cal-sans -mb-5 block text-[64px] leading-none text-white"
+              className="font-cal-sans -mb-5 block text-[64px] leading-none text-white md:line-clamp-2"
             >
               {project}
             </span>

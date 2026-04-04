@@ -1,5 +1,7 @@
 import projectDashboardWNC from '../assets/images/project-dashboard-wnc.png'
 import landingPageWNC from '../assets/images/project-landingPageWNC.png'
+import banner from '../assets/images/banner.jpg'
+// import banner2 from '../assets/images/contact.jpg'
 
 export const PROJECTS_DATA = [
   {

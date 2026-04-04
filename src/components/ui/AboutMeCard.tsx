@@ -29,20 +29,22 @@ const AboutMeCard = () => {
   return (
     <div className="flex flex-col flex-wrap justify-center gap-10 px-5 md:flex-row md:justify-baseline md:px-8">
       <div className="flex w-full flex-col items-center justify-center lg:w-1/2">
-        <div className="relative h-121.75 w-full overflow-hidden rounded-3xl lg:w-107">
-          <div ref={photoRef} className="h-full w-full overflow-hidden">
-            <img
-              src={ABOUT_ME_DATA.photo}
-              alt="Profile"
-              className="h-full w-full object-cover brightness-90"
-            />
-          </div>
-          <div className="absolute bottom-8 left-8 flex items-center gap-2.5">
-            <div className="hover:bg-orange rounded-full bg-white/16 p-3 transition-colors duration-300">
-              <Instagram size={20} className="h-5 w-5 text-white/80" />
+        <div className="h-121.75 w-full overflow-hidden rounded-3xl lg:w-107">
+          <div ref={photoRef} className="relative h-full w-full">
+            <div className="h-full w-full overflow-hidden">
+              <img
+                src={ABOUT_ME_DATA.photo}
+                alt="Profile"
+                className="h-full w-full object-cover brightness-90"
+              />
             </div>
-            <div className="hover:bg-orange rounded-full bg-white/16 p-3">
-              <Linkedin size={20} className="h-5 w-5 text-white/80" />
+            <div className="absolute bottom-8 left-8 flex items-center gap-2.5">
+              <div className="hover:bg-orange rounded-full bg-white/16 p-3 transition-colors duration-300">
+                <Instagram size={20} className="h-5 w-5 text-white/80" />
+              </div>
+              <div className="hover:bg-orange rounded-full bg-white/16 p-3">
+                <Linkedin size={20} className="h-5 w-5 text-white/80" />
+              </div>
             </div>
           </div>
         </div>

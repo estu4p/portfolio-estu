@@ -1,4 +1,4 @@
-import banner from '../assets/images/banner.jpg'
+import banner from '../assets/images/banner01.png'
 import { useRef } from 'react'
 import { useRevealAnimation } from '../hooks/useRevealAnimation'
 
