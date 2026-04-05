@@ -59,7 +59,7 @@ const AboutMeCard = () => {
           </span>
           <p className="text-secondary mt-4 text-lg">{ABOUT_ME_DATA.p1}</p>
           <hr className="border-secondary/40 my-8" />
-          <span className="text-secondary block text-base">
+          <span className="text-secondary block text-lg">
             {ABOUT_ME_DATA.p2}
           </span>
         </div>

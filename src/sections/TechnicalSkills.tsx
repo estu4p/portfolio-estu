@@ -35,7 +35,8 @@ const TechnicalSkills = () => {
           ref={textBlur}
           className="font-cal-sans text-primary text-[64px] leading-none"
         >
-          Technical Skills
+          {/* Technical Skills */}
+          My Toolkit
         </h2>
       </div>
       <div className="mt-16 overflow-x-hidden px-5">
@@ -92,9 +93,8 @@ const TechnicalSkills = () => {
             </div>
           )}
           <p className="text-primary w-full text-center md:w-[40%]">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Praesentium, optio? Velit, dicta magnam assumenda quis suscipit
-            culpa facilis quo saepe.
+            I work with technologies that best fit the problem, prioritizing
+            efficiency, scalability, and long-term maintainability over trends.
           </p>
         </div>
       </div>

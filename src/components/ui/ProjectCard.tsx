@@ -91,6 +91,7 @@ const ProjectCard = ({
           <div className="absolute right-0 bottom-0 md:-right-20">
             <a
               href={previewLink}
+              target="_blank"
               className="text-white80 flex items-center gap-2 underline"
             >
               Preview <ArrowUpRight className="h-5 w-5" />
