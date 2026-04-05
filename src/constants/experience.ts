@@ -1,6 +1,6 @@
 import photo1 from '../assets/images/banner.jpg'
 import photo2 from '../assets/images/contact.jpg'
-import photo3 from '../assets/images/project1.jpg'
+import photo3 from '../assets/images/banner01.png'
 
 export const EXPERIENCE_DATA = [
   {
@@ -14,17 +14,17 @@ export const EXPERIENCE_DATA = [
   {
     id: 2,
     badge: 'Experience',
-    name: 'Magang IT - PT. XYZ',
-    year: '2021',
+    name: 'Backend Intern — Seven Inc',
+    year: '2024',
     photo: photo2,
-    desc: 'Information Systems graduate from UPN “Veteran” Yogyakarta, specializing in system design, backend development, and web applications. Built strong analytical and technical foundations through structured academic learning and real-world project implementation.',
+    desc: 'Backend Developer Intern at Seven Inc, responsible for developing and maintaining RESTful APIs, supporting backend features, and collaborating with the team to build stable and functional web applications.',
   },
   {
     id: 3,
     badge: 'Experience',
     name: 'Freelance Web Developer',
-    year: '2023 - Present',
+    year: '2024 - Present',
     photo: photo3,
-    desc: 'Information Systems graduate from UPN “Veteran” Yogyakarta, specializing in system design, backend development, and web applications. Built strong analytical and technical foundations through structured academic learning and real-world project implementation.',
+    desc: 'Freelance Web Developer, worked on building and maintaining web applications based on client needs, focusing on clean implementation, responsive design, and delivering functional and reliable solutions within project requirements.',
   },
 ]
