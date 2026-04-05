@@ -36,7 +36,7 @@ const ProjectCard = ({
     >
       {/* blur */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-75"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-75 will-change-transform"
         style={{
           backgroundImage: `url(${image})`,
           // backgroundPosition: 'right bottom -290px',
@@ -56,7 +56,7 @@ const ProjectCard = ({
             </div>
             <span
               ref={textBlur}
-              className="font-cal-sans -mb-5 block text-[64px] leading-none text-white md:line-clamp-2"
+              className="font-cal-sans -mb-5 block text-[64px] leading-none text-white will-change-transform md:line-clamp-2"
             >
               {project}
             </span>

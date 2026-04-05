@@ -42,7 +42,7 @@ const Contact = () => {
           <div className="md:w-2/5">
             <h2
               ref={textBlur}
-              className="font-cal-sans text-[64px] leading-[1.1] text-white"
+              className="font-cal-sans text-[64px] leading-[1.1] text-white will-change-transform"
             >
               Got a project in mind?
             </h2>
