@@ -10,7 +10,7 @@ const AboutMeCard = () => {
   const descRef = useRef<HTMLDivElement>(null)
 
   useScrollZoom(photoRef, {
-    scale: 1.25,
+    scale: 1.28,
     opacity: 0.8,
     duration: 0.8,
     ease: 'power2.out',
@@ -38,7 +38,7 @@ const AboutMeCard = () => {
                 className="h-full w-full object-cover brightness-90"
               />
             </div>
-            <div className="absolute bottom-8 left-8 flex items-center gap-2.5">
+            <div className="absolute bottom-10 left-10 flex items-center gap-2.5">
               <div className="hover:bg-orange rounded-full bg-white/16 p-3 transition-colors duration-300">
                 <Instagram size={20} className="h-5 w-5 text-white/80" />
               </div>

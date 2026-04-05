@@ -66,7 +66,7 @@ const Contact = () => {
                 {Array.from({ length: 4 }).map((_, index) => (
                   <div key={index} className="flex items-center gap-7.5">
                     <h3 className="font-cal-sans text-[32px] text-white">
-                      contact@estu.dev
+                      estu4ji@gmail.com
                     </h3>
                     <img src={icon1} alt="Icon" className="h-4 w-4" />
                   </div>

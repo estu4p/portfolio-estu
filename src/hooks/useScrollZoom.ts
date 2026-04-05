@@ -35,8 +35,8 @@ const useScrollZoom = <T extends HTMLElement>(
           opacity,
         },
         {
-          scale: 1,
-          opacity: 1,
+          scale: 1.1,
+          opacity: 0.9,
           duration,
           ease,
           scrollTrigger: {

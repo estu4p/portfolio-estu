@@ -1,5 +1,6 @@
 import projectDashboardWNC from '../assets/images/project-dashboard-wnc.png'
 import landingPageWNC from '../assets/images/project-landingPageWNC.png'
+import projectMsan from '../assets/images/project-msan.png'
 
 export const PROJECTS_DATA = [
   {
@@ -37,7 +38,7 @@ export const PROJECTS_DATA = [
     id: '3',
     project: 'Msan',
     desc: 'An e-commerce web application for shoe sales, featuring secure online payments and an integrated management dashboard to handle product stock, ensuring efficient transactions and scalable business operations.',
-    image: landingPageWNC,
+    image: projectMsan,
     year: '2026',
     tools: 'React.js, Laravel, MySQL, Midtrans Payment Gateway',
     features: [
