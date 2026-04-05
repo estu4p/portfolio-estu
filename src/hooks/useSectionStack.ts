@@ -32,7 +32,6 @@ const useSectionStack = (ref: React.RefObject<HTMLDivElement | null>) => {
               scale: 0.6,
               rotate: 6,
               force3D: true,
-              y: -500,
               ease: 'none',
               scrollTrigger: {
                 trigger: section,

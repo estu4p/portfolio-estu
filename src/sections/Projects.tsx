@@ -20,12 +20,15 @@ const Projects = () => {
         </span>
         <h2 className="text-title reveal-title">Work Highlight</h2>
       </div>
-      <div ref={cardRef} className="reveal-card relative flex flex-col gap-25">
+      <div
+        ref={cardRef}
+        className="reveal-card relative flex flex-col gap-16 md:gap-25"
+      >
         {PROJECTS_DATA.map((project, index) => (
           <div
             id={project.id}
             key={index}
-            className="project-section sticky -top-96 will-change-transform md:top-5"
+            className="project-section will-change-transform md:sticky md:top-5"
           >
             <ProjectCard {...project} />
           </div>
