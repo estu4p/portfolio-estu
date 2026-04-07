@@ -1,5 +1,5 @@
 import { Gauge, Layers, Settings, ShieldCheck, Sparkle } from 'lucide-react'
-import photo from '../assets/images/aboutMe.png'
+import photo from '../assets/images/profile1.png'
 
 export const ABOUT_ME_DATA = {
   title: 'How I Work',
