@@ -33,6 +33,8 @@ const Footer = () => {
                   <li key={subLink.label} className="">
                     <a
                       href={subLink.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="font-cal-sans text-2xl text-white"
                     >
                       {subLink.label}

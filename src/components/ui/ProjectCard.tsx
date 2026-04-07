@@ -92,6 +92,7 @@ const ProjectCard = ({
             <a
               href={previewLink}
               target="_blank"
+              rel="noopener noreferrer"
               className="text-white80 flex items-center gap-2 underline"
             >
               Preview <ArrowUpRight className="h-5 w-5" />

@@ -4,8 +4,10 @@ import HeroIcon from '../components/ui/HeroIcon'
 import { useRef } from 'react'
 import { useRevealAnimation } from '../hooks/useRevealAnimation'
 import AnimatedHeroText from '../components/ui/AnimatedHeroText'
+import useLenis from '../hooks/useLenis'
 
 const Hero = () => {
+  const lenisRef = useLenis()
   const hiRef = useRef<HTMLParagraphElement>(null)
   const descRef = useRef<HTMLParagraphElement>(null)
 
@@ -62,6 +64,12 @@ const Hero = () => {
           </p>
           <div className="mt-12">
             <Button
+              onClick={(e) => {
+                e.preventDefault()
+                lenisRef.current?.scrollTo('#contact', {
+                  duration: 1.2,
+                })
+              }}
               title="View Projects"
               icon={<ArrowRight className="h-5 w-5" />}
               className="button-shadow"

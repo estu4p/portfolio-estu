@@ -51,8 +51,9 @@ const AboutMe = () => {
           (About Me)
         </span>
         <div className="mt-4 flex w-full items-center justify-center">
-          <div className="w-full md:w-[70%]">
-            <RevealTextAboutMe text="I am a Fullstack Web Developer experienced in building modern, scalable web applications from concept to deployment." />
+          <div className="w-full md:w-[75%]">
+            {/* <RevealTextAboutMe text="I am a Fullstack Web Developer experienced in building modern, scalable web applications from concept to deployment." /> */}
+            <RevealTextAboutMe text="Turning your ideas into scalable web applications that drive business growth, improve efficiency, and deliver real impact" />
           </div>
         </div>
       </div>
